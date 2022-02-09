@@ -1,0 +1,94 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.register{
+    display: flex;
+    height: 100vh;
+}
+
+.register span{
+    color: white;
+}
+
+.register .left{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-width: 400px;
+}
+
+.register .right{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.register .logotipo{
+    margin: auto;
+    margin-bottom: 10%;
+    text-align: center;
+    justify-content: center;
+}
+
+.register .registerForm{
+    display: grid;
+}
+
+.register input, .register input:focus{
+    border-radius: 10px;
+    border: 0;
+    background-color: #ECECEC;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 15px!important;
+    width: 100%;
+}
+
+.register .goToLoginButton, .register .goToLoginButton:hover{
+    border-radius: 30px!important;
+    color: #449aff;
+    font-weight: 600;
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid #449aff;
+    margin-top: 10px!important;
+    width: 100%;
+    text-emphasis: none;
+    text-decoration: none;
+}
+
+.register .registerButton{
+    width: 100%;
+    background: linear-gradient(180deg, rgba(68, 154, 255, 1) 0%, rgba(7, 212, 212, 1) 100%);
+    border-radius: 30px!important;
+    color: white;
+    font-weight: 600;
+    background-color: white;
+    height: 50px;
+    padding: 10px;
+    border: 0;
+    margin-top: 10px!important;
+    text-emphasis: none;
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .register .right{
+        display: none;
+    }
+    .register .left{
+        margin: auto;
+        width: 90%;
+        z-index: 2;
+    }
+}
