@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css" />
+</head>
+    <body>
+            <div class='login'>
+            <div class="left">
+                <img class="logotipo" alt="vipyLogo" src="Logotipo.svg" alt="logotipo"  />
+                <form class="loginForm" onSubmit={login}>
+                    <input
+                        placeholder="Username"
+                    />
+                    <input
+                        placeholder="Password"
+                        type="password"
+                    />
+                    <button class="loginButton" type="submit">Login</button>
+                    <br />
+                    <Link to='#'>Esqueceu sua senha?</Link>
+                    <hr />
+                    <button class="goToRegisterButton">Cadastrar</button>
+                </form>
+            </div>
+            <div class="right">
+                <img alt="loginBackground" src="/bg.png" />
+            </div>
+        </div>
+        </body>
+</html>
