@@ -1,340 +1,313 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../styles/home.css" />
-        <link rel="stylesheet" href="../styles/sidebar.css" />
-        <link rel="stylesheet" href="../styles/modal.css" />
-        <link rel="stylesheet" href="../styles/postCreation.css" />
-        <link rel="stylesheet" href="../styles/post.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    </head>
-    <body>
-        <div class="siteContent">
-            <div class="topBar">
-                <div class="alignBar">
-                    <div>
-                        <form class="searchForm">
-                            <input class="searchInput" type="text" placeholder="Busque algo ou alguém" />
-                            <span class="material-icons searchIcon">search</span>
-                        </form>
-                    </div>
+  <head>
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
+    <link rel="stylesheet" href="../styles/postCreation.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="siteContent">
+      <div class="topBar">
+        <div class="alignBar">
+          <div>
+            <form class="searchForm">
+              <input
+                class="searchInput"
+                type="text"
+                placeholder="Busque algo ou alguém"
+              />
+              <span class="material-icons searchIcon">search</span>
+            </form>
+          </div>
 
-                    <div class="siteLogo">
-                        <Link to='/'>
-                            <img alt="vipyLogo" src="../assets/Logotipo.svg" />
-                        </Link>
-                    </div>
-                </div>
-            </div>
-            <div class="dashboard">
-                
-                <div class="sideBarLeft">
-                    <div class="leftBar ">
-                        <div class="leftBarAlign">
-                            <ul>
-                                <div class="profile">
-                                    <div class="imageContainer">
-
-                                        <div class="cover">
-                                            <img alt="profileCover" src="../assets/coverImage.gif" />
-                                        </div>
-                                    </div>
-                                    <div class="userProfilePictureSidebar">
-                                        <div class="userProfilePicture">
-                                            <img alt="profile" src='../assets/pfp.gif' />
-                                        </div>
-                                    </div>
-                                    <div class="profileInformations">
-                                        <span class="name">Pikachu</span>
-                                        <span class="username">@pikachu</span>
-                                    </div>
-                                    <div class="stars">
-                                        <span class="material-icons">
-                                            star
-                                        </span>
-                                        <span class="material-icons">
-                                            star
-                                        </span>
-                                        <span class="material-icons">
-                                            star
-                                        </span>
-                                        <span class="material-icons">
-                                            star
-                                        </span>
-                                        <span class="material-icons">
-                                            star
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="newPostButton">
-                                    <button class="newPost" id="myBtn">
-                                        Novo Post
-                                    </button>
-                                    <button class="newPostPlus">
-                                        +
-                                    </button>
-                                </div>
-                                <Link to='/'>
-                                    <li class="item-menu">
-                                        <span class="material-icons">
-                                            home
-                                        </span>
-                                        <span class="menu">Inicio</span>
-                                    </li>
-                                </Link>
-                                <Link to='/'>
-                                    <li class="item-menu">
-                                        <span class="material-icons">
-                                            mail
-                                        </span>
-                                        <span class="menu">Mensagens</span>
-                                    </li>
-                                </Link>
-                                <Link to='/discovery'>
-                                    <li class="item-menu">
-                                        <span class="material-icons">
-                                            explore
-                                        </span>
-                                        <span class="menu">Descubra</span>
-                                    </li>
-                                </Link>
-                                <Link to='/'>
-                                    <li class="item-menu">
-                                        <span class="material-icons">
-                                            notifications
-                                        </span>
-                                        <span class="menu">Notificações</span>
-                                    </li>
-                                </Link>
-                                <Link to='/'>
-                                    <div class="siteLogoSidebar">
-                                        <img alt="vipyLogo" src="../assets/Logotipo.svg" />
-                                    </div>
-                                </Link>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline">
-                    <div class="post">
-                        <div class="card cardPost" id="cardPost">
-
-                            <div class="cardContent">
-
-
-                                <div class="card-header" id="cardHeaderPost">
-                                    <div class="profileLink">
-                                        <div class="postAuthorProfileImage">
-                                            <div class="userProfilePicture">
-                                                <img alt="profile" src='../assets/pfp.gif' />
-                                            </div>
-                                        </div>
-                                        <div class="userIdentification">
-                                            <div>
-                                                <span>Pikachu</span>
-                                                <span>@pikachu</span>
-                                            </div>
-                                            <span>Postado há 2 min</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body" id="cardBodyPost" >
-                                    <div class="postContent">
-                                        Testando o post! Tudo funcionando, nada
-                                        de errado acontecendo aqui...
-                                    </div>
-                                </div>
-                                
-                                        <div class="commentsQuantity">
-                                            <div class="commentInputProfileImage">
-                                                <div class="userProfilePicture">
-                                                    <img alt="profile" src='../assets/pfp.gif' />
-                                                </div>
-                                            </div>
-                                            <span>Comente algo...</span>
-                                            <span class="commentCount">42</span>
-                                        </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="card cardPost" id="cardPost">
-
-                            <div class="cardContent">
-
-
-                                <div class="card-header" id="cardHeaderPost">
-                                    <div class="profileLink">
-                                        <div class="postAuthorProfileImage">
-                                            <div class="userProfilePicture">
-                                                <img alt="profile" src='../assets/pfp.gif' />
-                                            </div>
-                                        </div>
-                                        <div class="userIdentification">
-                                            <div>
-                                                <span>Pikachu</span>
-                                                <span>@pikachu</span>
-                                            </div>
-                                            <span>Postado há 2 min</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body" id="cardBodyPost" >
-                                    <div class="postContent">
-                                        Testando o post! Tudo funcionando, nada
-                                        de errado acontecendo aqui...
-                                    </div>
-                                </div>
-                                
-                                        <div class="commentsQuantity">
-                                            <div class="commentInputProfileImage">
-                                                <div class="userProfilePicture">
-                                                    <img alt="profile" src='../assets/pfp.gif' />
-                                                </div>
-                                            </div>
-                                            <span>Comente algo...</span>
-                                            <span class="commentCount">42</span>
-                                        </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="card cardPost" id="cardPost">
-
-                            <div class="cardContent">
-
-
-                                <div class="card-header" id="cardHeaderPost">
-                                    <div class="profileLink">
-                                        <div class="postAuthorProfileImage">
-                                            <div class="userProfilePicture">
-                                                <img alt="profile" src='../assets/pfp.gif' />
-                                            </div>
-                                        </div>
-                                        <div class="userIdentification">
-                                            <div>
-                                                <span>Pikachu</span>
-                                                <span>@pikachu</span>
-                                            </div>
-                                            <span>Postado há 2 min</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body" id="cardBodyPost" >
-                                    <div class="postContent">
-                                        Testando o post! Tudo funcionando, nada
-                                        de errado acontecendo aqui...
-                                    </div>
-                                </div>
-                                
-                                        <div class="commentsQuantity">
-                                            <div class="commentInputProfileImage">
-                                                <div class="userProfilePicture">
-                                                    <img alt="profile" src='../assets/pfp.gif' />
-                                                </div>
-                                            </div>
-                                            <span>Comente algo...</span>
-                                            <span class="commentCount">42</span>
-                                        </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="card cardPost" id="cardPost">
-
-                            <div class="cardContent">
-
-
-                                <div class="card-header" id="cardHeaderPost">
-                                    <div class="profileLink">
-                                        <div class="postAuthorProfileImage">
-                                            <div class="userProfilePicture">
-                                                <img alt="profile" src='../assets/pfp.gif' />
-                                            </div>
-                                        </div>
-                                        <div class="userIdentification">
-                                            <div>
-                                                <span>Pikachu</span>
-                                                <span>@pikachu</span>
-                                            </div>
-                                            <span>Postado há 2 min</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body" id="cardBodyPost" >
-                                    <div class="postContent">
-                                        Testando o post! Tudo funcionando, nada
-                                        de errado acontecendo aqui...
-                                    </div>
-                                </div>
-                                
-                                        <div class="commentsQuantity">
-                                            <div class="commentInputProfileImage">
-                                                <div class="userProfilePicture">
-                                                    <img alt="profile" src='../assets/pfp.gif' />
-                                                </div>
-                                            </div>
-                                            <span>Comente algo...</span>
-                                            <span class="commentCount">42</span>
-                                        </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sideBarRight">
-                </div>
-            </div>
+          <div class="siteLogo">
+            <a to="/">
+              <img alt="vipyLogo" src="../assets/Logotipo.svg" />
+            </a>
+          </div>
         </div>
-         <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="post createPost">
-                    <form >
-                        <div class="card cardPost" id="cardPost">
-                            <div class="cardContent">
-                                <div class="card-header" id="cardHeaderPost">
-                                    <div class="profileLink">
-                                        <div class="postAuthorProfileImage">
-                                            <div class="userProfilePicture">
-                                                <img alt="profile" src='../assets/pfp.gif' />
-                                            </div>
-                                        </div>
-                                        <div class="userIdentification">
-                                            <div>
-                                                <span class="name">Pikachu</span><br>
-                                                <span class="username">@pikachu</span>
-                                            </div>
-                                            <span>Agora</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body" id="cardBodyPost" >
-                                    <div class="postCreationContent">
-                                        <textarea class="textArea" name="content"
-                                        placeholder="Comente algo..."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <div class="submitPost">
-                                <input class='createPost' type="submit" data="disable:true" value="Postar" />
-                            </div>
-                        </div>
-                    </form>
+      </div>
+      <div class="dashboard">
+        <div class="sideBarLeft">
+          <div class="leftBar">
+            <div class="leftBarAlign">
+              <ul>
+                <div class="profile">
+                  <div class="imageContainer">
+                    <div class="cover">
+                      <img alt="profileCover" src="../assets/coverImage.gif" />
+                    </div>
+                  </div>
+                  <div class="userProfilePictureSidebar">
+                    <div class="userProfilePicture">
+                      <img alt="profile" src="../assets/pfp.gif" />
+                    </div>
+                  </div>
+                  <div class="profileInformations">
+                    <span class="name">Pikachu</span>
+                    <span class="username">@pikachu</span>
+                  </div>
+                  <div class="stars">
+                    <span class="material-icons"> star </span>
+                    <span class="material-icons"> star </span>
+                    <span class="material-icons"> star </span>
+                    <span class="material-icons"> star </span>
+                    <span class="material-icons"> star </span>
+                  </div>
                 </div>
+                <div class="newPostButton">
+                  <button class="newPost" id="myBtn">Novo Post</button>
+                  <button class="newPostPlus">+</button>
+                </div>
+                <a href="/">
+                  <li class="item-menu">
+                    <span class="material-icons"> home </span>
+                    <span class="menu">Inicio</span>
+                  </li>
+                </a>
+                <a href="/">
+                  <li class="item-menu">
+                    <span class="material-icons"> mail </span>
+                    <span class="menu">Mensagens</span>
+                  </li>
+                </a>
+                <a href="/discovery">
+                  <li class="item-menu">
+                    <span class="material-icons"> explore </span>
+                    <span class="menu">Descubra</span>
+                  </li>
+                </a>
+                <a href="/">
+                  <li class="item-menu">
+                    <span class="material-icons"> notifications </span>
+                    <span class="menu">Notificações</span>
+                  </li>
+                </a>
+                <a href="/">
+                  <div class="siteLogoSidebar">
+                    <img alt="vipyLogo" src="../assets/Logotipo.svg" />
+                  </div>
+                </a>
+              </ul>
             </div>
+          </div>
         </div>
-        <script src="../js/modal.js"></script>
-    </body> 
+        <div class="timeline">
+          <div class="post">
+            <div class="card cardPost" id="cardPost">
+              <div class="cardContent">
+                <div class="card-header" id="cardHeaderPost">
+                  <div class="profileLink">
+                    <div class="postAuthorProfileImage">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
+                    </div>
+                    <div class="userIdentification">
+                      <div>
+                        <span>Pikachu</span>
+                        <span>@pikachu</span>
+                      </div>
+                      <span>Postado há 2 min</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body" id="cardBodyPost">
+                  <div class="postContent">
+                    Testando o post! Tudo funcionando, nada de errado
+                    acontecendo aqui...
+                  </div>
+                </div>
+
+                <div class="commentsQuantity">
+                  <div class="commentInputProfileImage">
+                    <div class="userProfilePicture">
+                      <img alt="profile" src="../assets/pfp.gif" />
+                    </div>
+                  </div>
+                  <span>Comente algo...</span>
+                  <span class="commentCount">42</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="card cardPost" id="cardPost">
+              <div class="cardContent">
+                <div class="card-header" id="cardHeaderPost">
+                  <div class="profileLink">
+                    <div class="postAuthorProfileImage">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
+                    </div>
+                    <div class="userIdentification">
+                      <div>
+                        <span>Pikachu</span>
+                        <span>@pikachu</span>
+                      </div>
+                      <span>Postado há 2 min</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body" id="cardBodyPost">
+                  <div class="postContent">
+                    Testando o post! Tudo funcionando, nada de errado
+                    acontecendo aqui...
+                  </div>
+                </div>
+
+                <div class="commentsQuantity">
+                  <div class="commentInputProfileImage">
+                    <div class="userProfilePicture">
+                      <img alt="profile" src="../assets/pfp.gif" />
+                    </div>
+                  </div>
+                  <span>Comente algo...</span>
+                  <span class="commentCount">42</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="card cardPost" id="cardPost">
+              <div class="cardContent">
+                <div class="card-header" id="cardHeaderPost">
+                  <div class="profileLink">
+                    <div class="postAuthorProfileImage">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
+                    </div>
+                    <div class="userIdentification">
+                      <div>
+                        <span>Pikachu</span>
+                        <span>@pikachu</span>
+                      </div>
+                      <span>Postado há 2 min</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body" id="cardBodyPost">
+                  <div class="postContent">
+                    Testando o post! Tudo funcionando, nada de errado
+                    acontecendo aqui...
+                  </div>
+                </div>
+
+                <div class="commentsQuantity">
+                  <div class="commentInputProfileImage">
+                    <div class="userProfilePicture">
+                      <img alt="profile" src="../assets/pfp.gif" />
+                    </div>
+                  </div>
+                  <span>Comente algo...</span>
+                  <span class="commentCount">42</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="card cardPost" id="cardPost">
+              <div class="cardContent">
+                <div class="card-header" id="cardHeaderPost">
+                  <div class="profileLink">
+                    <div class="postAuthorProfileImage">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
+                    </div>
+                    <div class="userIdentification">
+                      <div>
+                        <span>Pikachu</span>
+                        <span>@pikachu</span>
+                      </div>
+                      <span>Postado há 2 min</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body" id="cardBodyPost">
+                  <div class="postContent">
+                    Testando o post! Tudo funcionando, nada de errado
+                    acontecendo aqui...
+                  </div>
+                </div>
+
+                <div class="commentsQuantity">
+                  <div class="commentInputProfileImage">
+                    <div class="userProfilePicture">
+                      <img alt="profile" src="../assets/pfp.gif" />
+                    </div>
+                  </div>
+                  <span>Comente algo...</span>
+                  <span class="commentCount">42</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sideBarRight"></div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="post createPost">
+          <form>
+            <div class="card cardPost" id="cardPost">
+              <div class="cardContent">
+                <div class="card-header" id="cardHeaderPost">
+                  <div class="profileLink">
+                    <div class="postAuthorProfileImage">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
+                    </div>
+                    <div class="userIdentification">
+                      <div>
+                        <span class="name">Pikachu</span><br />
+                        <span class="username">@pikachu</span>
+                      </div>
+                      <span>Agora</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body" id="cardBodyPost">
+                  <div class="postCreationContent">
+                    <textarea
+                      class="textArea"
+                      name="content"
+                      placeholder="Comente algo..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="submitPost">
+                <input
+                  class="createPost"
+                  type="submit"
+                  data="disable:true"
+                  value="Postar"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../js/modal.js"></script>
+  </body>
 </html>
