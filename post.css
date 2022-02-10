@@ -293,6 +293,10 @@
 	height: 30px;
 }
 
+.commentInputProfileImage img{
+    width: 100%;
+}
+
 .commentsQuantity > * {
 	vertical-align: middle;
 	font-size: 12px;

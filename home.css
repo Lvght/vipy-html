@@ -167,6 +167,49 @@ body{
     object-fit: cover;
 }
 
+.dashboard {
+    padding-top: 63px;
+	position: relative;
+	min-height: 949px;
+    margin: auto;
+	display: flex;
+    background-color: #f3f3f3;
+}
+
+.siteContent {
+    position: relative;
+	min-height: 949px;
+    margin: auto;
+	width: 100%;
+}
+
+.sideBarLeft {
+    width: 25%;
+    height: 100vh;
+}
+
+.sideBarRight {
+    width: 25%;
+}
+
+.timeline {
+	position: relative;
+    width: 49%;
+	font-size: 20px;
+	margin: 0 auto;
+    z-index: 1;
+}
+
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .timeline{
+        width: 90%;
+    }
+}
+
+
+
+
 
 @media only screen and (max-width: 600px) {
 	.topBar {
@@ -183,5 +226,21 @@ body{
 		height: 23px;
 		width: 23px;
 	}
+
+    	.timeline {
+		width: 100%;
+    }
+
+    .sideBarRight{
+        display: none;
+    }
+
+    .sideBarLeft{
+        display: none;
+    }
+    
+    .dashboard {
+        margin:0;
+    }
 	
 }
