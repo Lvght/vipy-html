@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.topBar {
+  top: 0;
+  left: 0;
+  color: black;
+  display: inline-flex;
+  position: fixed;
+  height: 65px;
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  border-bottom: 1px solid #e2e2e2;
+  z-index: 5;
+}
+
+.searchForm {
+  display: flex !important;
+  height: 100%;
+  margin: auto;
+}
+.searchInput {
+  width: 0px;
+  transition: width 0.5s;
+  overflow: hidden;
+  border: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.searchIcon {
+  margin-left: -40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.searchInput:focus {
+  outline: none !important;
+  border: 0;
+  box-shadow: 0;
+}
+
+.searchForm:hover .searchInput {
+  border: 1.5px solid #26b6ea;
+  width: 90%;
+  transition: width 0.5s;
+}
+
+.alignBar {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-flex;
+}
+
+.alignBar div:nth-child(1) form {
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  font-family: Lobster;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+}
+
+.alignBar div:nth-child(1) form > * {
+  margin-right: 10px;
+}
+
+.alignBar {
+  vertical-align: middle;
+}
+
+.siteLogo {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: zpx;
+  z-index: 5;
+  color: black;
+  vertical-align: middle;
+}
+
+.siteLogo a > * {
+  margin-right: 5px;
+}
+
+.siteLogo a {
+  height: min-content;
+  margin: auto;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.siteLogo a:hover {
+  height: min-content;
+  margin: auto;
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.alignBar div:nth-child(2) img {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.arrowDropdown {
+  right: 10px;
+  margin-top: 20px;
+  border: 2px solid white;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  z-index: 5;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+}
+.dropdownNavbar,
+.dropdownNavbar:not(:disabled):not(.disabled).active,
+.dropdownNavbar:not(:disabled):not(.disabled):active,
+.show > .dropdownNavbar.dropdown-toggle {
+  margin: auto;
+  background-color: transparent !important;
+  color: black !important;
+  border: 0 !important;
+  box-shadow: 0 0 0 0rem !important;
+  font-size: 20px !important;
+}
+
+.show > .dropdownNavbar.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0rem !important;
+}
+
+.userProfilePicture {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.userProfilePicture img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  margin: auto;
+  object-fit: cover;
+}
+
+.dashboard {
+  padding-top: 63px;
+  position: relative;
+  min-height: 949px;
+  margin: auto;
+  display: flex;
+  background-color: #f3f3f3;
+}
+
+.siteContent {
+  position: relative;
+  min-height: 949px;
+  margin: auto;
+  width: 100%;
+}
+
+.sideBarLeft {
+  width: 25%;
+  height: 100vh;
+}
+
+.sideBarRight {
+  width: 25%;
+}
+
+.timeline {
+  position: relative;
+  width: 49%;
+  font-size: 20px;
+  margin: 10px auto;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .timeline {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .topBar {
+    width: 100%;
+    height: 50px;
+  }
+
+  .alignBar div:nth-child(1) a {
+    font-size: 20px;
+  }
+
+  .arrowDropdown {
+    margin-top: 15px;
+    height: 23px;
+    width: 23px;
+  }
+
+  .timeline {
+    width: 100%;
+  }
+
+  .sideBarRight {
+    display: none;
+  }
+
+  .sideBarLeft {
+    display: none;
+  }
+
+  .dashboard {
+    margin: 0;
+  }
+}
