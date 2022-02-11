@@ -11,25 +11,12 @@
   color: black;
 }
 
-.cardContent {
+.card .content {
   padding: 20px;
   border-radius: 10px;
 }
 
-#cardPost {
-  border-radius: 10px;
-  border: 0;
-}
-
-.openPost {
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-height: 100%;
-  min-width: 100%;
-}
-
-#cardHeaderPost {
+.card .header {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: white;
@@ -40,7 +27,7 @@
   margin: auto;
 }
 
-#cardHeaderPost h3 {
+.card .header h3 {
   color: #8a8a8a;
   font-size: 17px;
   font-style: italic;
@@ -48,12 +35,12 @@
   margin-left: 5px;
 }
 
-#cardHeaderPost h2 {
+.card .header h2 {
   margin-left: 5px;
   line-height: 20px;
 }
 
-#cardHeaderPost h4 {
+.card .header h4 {
   color: #8a8a8a;
   font-size: 14px;
   margin-left: 5px;
@@ -81,7 +68,7 @@
   font-style: normal;
 }
 
-.card-header img {
+.card .header img {
   position: relative;
   width: 60px;
   height: 60px;
@@ -89,20 +76,10 @@
 }
 
 .postAuthorProfileImage {
+  display: flex;
   position: relative;
   width: 60px;
   height: 60px;
-}
-
-.rightHeader {
-  position: absolute;
-  display: flex;
-  right: 20px;
-  margin-top: 4px;
-}
-
-.rightHeader svg {
-  margin-top: 2px;
 }
 
 .date {
@@ -115,14 +92,7 @@
   vertical-align: middle;
 }
 
-.headerColor {
-  height: 7px;
-  width: 100%;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-#cardBodyPost {
+.card .body {
   white-space: pre-line;
   font-size: 30px;
   padding: 0;
@@ -132,153 +102,6 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   text-align: justify;
-}
-
-.postImage {
-  background-color: #0000004d;
-  margin-top: auto;
-  margin-bottom: auto;
-  max-height: 700px;
-  margin-left: -20px;
-  margin-right: -20px;
-  overflow: hidden;
-}
-
-.slide {
-  display: grid;
-}
-
-.postImage img {
-  position: relative;
-  width: 100%;
-}
-
-.sharedPost .post .card {
-  border-radius: 5px !important;
-}
-
-.sharedPost .post {
-  border-radius: 5px;
-  border-bottom: 0px;
-}
-
-.sharedPost .post .card-header {
-  border-radius: 5px;
-}
-
-.hiddenPost {
-  border: 1px solid #65656578;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-#cardFooterPost {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border: 0;
-  width: 100%;
-  display: flex;
-  background: #fdfdfd;
-  border-radius: 5px;
-  padding: 0;
-}
-
-#cardFooterPost form {
-  position: absolute;
-  display: flex;
-  right: 20px;
-}
-
-.mdc-icon-button {
-  background-color: transparent;
-  border: 0px;
-  color: black;
-}
-
-.share {
-  position: relative;
-  width: 53px;
-  height: 30px;
-  background: transparent;
-  transition: height 0.2s;
-  background: #fdfdfd;
-  border: 1px solid;
-  border-color: var(--share-color);
-  color: var(--share-color);
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
-.share.active {
-  background-image: var(--gradient-share);
-  color: white;
-}
-
-.share svg {
-  vertical-align: baseline;
-}
-
-.reactionGroup {
-  display: flex;
-}
-
-.counters {
-  display: flex;
-  flex-direction: row;
-  height: 50px;
-  vertical-align: middle;
-  font-size: 17px;
-}
-
-.shareCounter {
-  display: flex;
-  flex-direction: row;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.counters .share {
-  background-image: var(--gradient-share);
-}
-
-.reactionCounter {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-}
-
-.reactionTypeIndicator {
-  height: 15px;
-  width: 15px;
-  border-radius: 100%;
-  margin-right: 8px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.reactionCounter .r1 {
-  background-image: var(--gradient-first-reaction);
-}
-
-.reactionCounter .r2 {
-  background-image: var(--gradient-second-reaction);
-}
-
-.reactionCounter .r3 {
-  background-image: var(--gradient-third-reaction);
-}
-
-.reactionCounter .r4 {
-  background-image: var(--gradient-fourth-reaction);
-}
-
-.sumReactions {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .commentsQuantity {
@@ -322,24 +145,6 @@
   font-size: 15px;
 }
 
-.dropdownPost,
-.dropdownPost:not(:disabled):not(.disabled).active,
-.dropdownPost:not(:disabled):not(.disabled):active,
-.show > .dropdownPost.dropdown-toggle {
-  height: min-content !important;
-  margin: auto;
-  background-color: transparent !important;
-  color: black !important;
-  border: 0 !important;
-  box-shadow: 0 0 0 0rem !important;
-  font-size: 20px !important;
-  padding: 0 !important;
-}
-
-.show > .dropdownPost.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0rem !important;
-}
-
 .seePost {
   margin: auto;
   display: grid;
@@ -349,6 +154,8 @@
   text-decoration: none;
   color: #2391c7;
   font-weight: bolder;
+  width: 100%;
+  align-items: center;
 }
 
 .commentariesDiv {

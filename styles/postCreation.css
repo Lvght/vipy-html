@@ -1,113 +1,72 @@
 .createPost {
-	padding: 10px;
-	margin-top: 0;
+  padding: 10px;
+  margin-top: 0;
 }
 
-.createPost .cardContent{
-	padding: 0;
+.createPost .card .content {
+  padding: 0;
 }
 
-.createPost{
-	border-radius: 15px!important;
+.createPost {
+  border-radius: 15px !important;
 }
 
-.textArea, .textArea:focus, .textArea:active {
-    max-width: 100%;
-    min-width: 100%;
-    height: 150px;
-    max-height: 150px;
-	background-color: white;
-	color: black;
-	border: 0;
-
+.textArea,
+.textArea:focus,
+.textArea:active {
+  max-width: 100%;
+  min-width: 100%;
+  height: 150px;
+  max-height: 150px;
+  background-color: white;
+  color: black;
+  border: 0;
 }
 
-.fileInput input{
-	color: black;
+.submitPost {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
 }
 
-.submitPost{
-	display: flex;
-	flex-direction: row;
-	margin-left: auto;
+.post .createPost {
+  border-radius: 20px !important;
+  font-size: 16px;
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-top: 2px !important;
+  cursor: pointer;
 }
 
-.post .createPost, .post .createPostVips{
-	border-radius: 20px!important;
-	font-size: 16px;
-	height: 35px;
-	width: 150px;
-	text-align: center;
-	padding: 7px;
-	padding-left: 13px;
-	padding-right: 13px;
-	margin-top: 2px!important;
-	cursor: pointer;
+.post .createPost {
+  border: 0;
+  color: white;
+  background-color: #449aff;
+  margin-left: 10px;
 }
 
-
-.post .createPost{
-	border: 0;
-	color: white;
-	background-color: #449aff;
-	margin-left: 10px;
+.createPost .cardPost {
+  padding: 0;
 }
 
-.post .createPostVips{
-	color: #449aff;
-	background-color: white;
-	border: 1px solid #449aff;
+.createPost .bottom {
+  display: flex;
+  flex-direction: row;
 }
 
-.createPost .cardPost{
-	padding: 0;
-}
-
-.createPost .postImage{
-	margin-left: -10px;
-    margin-right: -10px;
-}
-
-.createPost .closeModal{
-	position: absolute;
-	right: 0;
-	top: 0;
-	background-color: #57a1fc;
-	height: 38px;
-	width: 38px;
-	border-bottom-left-radius: 15px;
-	border-top-right-radius: 15px;
-	cursor: pointer;
-}
-
-.closeModalIcon{
-	height: 38px;
-	width: 38px;
-	color: white;
-}
-
-.createPost .bottom{
-	display: flex;
-	flex-direction: row;
-}
-
-.uploadImageButton{
-	color: #57a1fc;
-	height: 25px;
-	width: 25px;
-	margin-top: auto;
-	margin-bottom: auto;
-	cursor: pointer;
-}
-
-.postAuthorProfileImage{
-	position:relative;
-	width: 60px;
-	height: 60px;
+.postAuthorProfileImage {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 60px;
 }
 
 .postCreationContent {
-	font-family: 'Roboto', sans-serif;
-  	font-size: 18px;
-  	text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: justify;
 }

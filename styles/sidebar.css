@@ -1,4 +1,4 @@
-.leftBar {
+.sidebarContent {
   height: 100vh !important;
   width: 20%;
   max-width: 400px;
@@ -12,31 +12,29 @@
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 /* Track */
-.leftBar::-webkit-scrollbar-track {
+.sidebarContent::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
-.leftBar::-webkit-scrollbar-thumb {
+.sidebarContent::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
-.leftBar::-webkit-scrollbar-thumb:hover {
+.sidebarContent::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.leftBar::-webkit-scrollbar {
+.sidebarContent::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.leftBar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.sidebarContent {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.newPost {
+.newPost,
+.newPostPlus {
   margin: auto;
   width: 80%;
   background: linear-gradient(
@@ -58,36 +56,23 @@
 }
 
 .newPostPlus {
-  margin: auto;
-  width: 80%;
-  background: linear-gradient(
-    180deg,
-    rgba(68, 154, 255, 1) 0%,
-    rgba(7, 212, 212, 1) 100%
-  );
-  border-radius: 15px !important;
-  color: white;
-  font-weight: 600;
-  background-color: white;
-  height: 45px;
-  padding: 10px;
-  border: 0;
-  margin-top: 10px !important;
-  text-emphasis: none;
-  text-decoration: none;
   display: none;
+  height: 40px;
+  line-height: 20px;
 }
 
 .newPostButton {
   text-align: center;
 }
+
 .cover {
   width: 100%;
   overflow: hidden;
   position: relative;
   z-index: -1;
 }
-dr .cover img {
+
+.cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -137,7 +122,7 @@ dr .cover img {
   font-size: 20px;
 }
 
-.leftBar ul {
+.sidebarContent ul {
   padding: 0 !important;
   margin: 0 !important;
   list-style-type: none;
@@ -146,17 +131,17 @@ dr .cover img {
   padding-bottom: 50px;
 }
 
-.leftBar::-webkit-scrollbar {
+.sidebarContent::-webkit-scrollbar {
   display: none;
 }
 
-.leftBar li {
+.sidebarContent li {
   width: auto;
   height: 60px;
   line-height: 50px;
 }
 
-.leftBar .item-menu {
+.sidebarContent .item-menu {
   display: flex;
   margin-top: 30px;
   align-items: center;
@@ -166,12 +151,12 @@ dr .cover img {
   padding-left: 20%;
 }
 
-.item-menu svg {
-  font-size: 25px;
+.item-menu .material-icons {
+  font-size: 32px !important;
 }
 
-.leftBar a,
-.leftBar a:hover {
+.sidebarContent a,
+.sidebarContent a:hover {
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -195,72 +180,28 @@ span.menu {
   width: 190px;
 }
 
-.siteLogoSidebar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 5;
-  color: black;
-  width: min-content;
-  margin-top: 60px;
-}
-
-.siteLogoSidebar img {
-  width: 100px;
-}
-
-.siteLogoReduzidoSidebar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 5;
-  color: black;
-  width: min-content;
-  margin-top: 60px;
-  display: none;
-}
-
-.siteLogoReduzidoSidebar img {
-  width: 30px;
-}
-
-.siteLogoSidebar a > * {
-  margin-right: 5px;
-}
-
-.siteLogoSidebar a {
-  height: min-content;
-  margin: auto;
-  display: flex;
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
-}
-
-.siteLogoSidebar a:hover {
-  height: min-content;
-  margin: auto;
-  display: flex;
-  text-decoration: none;
-  color: black;
-}
-
 @media only screen and (max-width: 600px) {
-  .leftBar {
+  .sidebarContent {
     display: none;
   }
 }
+
 @media only screen and (max-width: 1000px) {
-  .leftBar {
+  .sidebar {
+    width: 15%;
+  }
+
+  .sidebarContent {
     width: 50px;
   }
 
-  .leftBar .userProfilePictureSidebar {
+  .sidebarContent .userProfilePictureSidebar {
     width: 50px;
     height: 50px;
+    margin-top: 0;
   }
 
-  .leftBar .cover {
+  .sidebarContent .cover {
     animation: fadeIn 3s;
     animation-delay: 5s;
     animation-fill-mode: forwards;
@@ -268,43 +209,27 @@ span.menu {
     animation-fill-mode: forwards;
   }
 
-  .leftBar .newPost {
+  .sidebarContent .newPost {
     display: none;
   }
 
-  .leftBar .newPostPlus {
+  .sidebarContent .newPostPlus {
     display: grid;
   }
 
-  /*.leftBar:hover .cover{
-        visibility: visible;
-        animation-delay: 1s;
-        animation: 1s fadeIn;
-    }
-    
-        .leftBar:hover .userProfilePictureSidebar{
-        width: 70px;
-        height: 70px;
-    }
-
-
-    .leftBar:hover {
-        width: 270px;
-    }*/
-
-  .leftBar .profileInformations {
+  .sidebarContent .profileInformations {
     display: none;
   }
 
-  .leftBar .stars {
+  .sidebarContent .stars {
     display: none;
   }
 
-  .leftBar .siteLogoSidebar {
+  .sidebarContent .logoSidebar {
     display: none;
   }
 
-  .leftBar .siteLogoReduzidoSidebar {
+  .sidebarContent .logoReduzidoSidebar {
     display: grid;
   }
 }

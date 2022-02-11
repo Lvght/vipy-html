@@ -1,9 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 949px;
+  margin: auto;
+  width: 100%;
 }
 
-.topBar {
+.navbar {
   top: 0;
   left: 0;
   color: black;
@@ -53,7 +57,7 @@ body {
   transition: width 0.5s;
 }
 
-.alignBar {
+.align {
   width: 100%;
   padding-left: 25px;
   padding-right: 25px;
@@ -62,7 +66,7 @@ body {
   display: inline-flex;
 }
 
-.alignBar div:nth-child(1) form {
+.align div:nth-child(1) form {
   position: absolute;
   font-size: 20px;
   color: black;
@@ -75,15 +79,15 @@ body {
   margin: auto;
 }
 
-.alignBar div:nth-child(1) form > * {
+.align div:nth-child(1) form > * {
   margin-right: 10px;
 }
 
-.alignBar {
+.align {
   vertical-align: middle;
 }
 
-.siteLogo {
+.logo {
   display: grid;
   margin-left: auto;
   margin-right: auto;
@@ -93,11 +97,11 @@ body {
   vertical-align: middle;
 }
 
-.siteLogo a > * {
+.logo a > * {
   margin-right: 5px;
 }
 
-.siteLogo a {
+.logo a {
   height: min-content;
   margin: auto;
   display: flex;
@@ -107,7 +111,7 @@ body {
   justify-content: center;
 }
 
-.siteLogo a:hover {
+.logo a:hover {
   height: min-content;
   margin: auto;
   display: flex;
@@ -115,7 +119,7 @@ body {
   color: black;
 }
 
-.alignBar div:nth-child(2) img {
+.align div:nth-child(2) img {
   position: relative;
   width: 80%;
   height: 80%;
@@ -168,7 +172,7 @@ body {
   object-fit: cover;
 }
 
-.dashboard {
+.page {
   padding-top: 63px;
   position: relative;
   min-height: 949px;
@@ -177,14 +181,7 @@ body {
   background-color: #f3f3f3;
 }
 
-.siteContent {
-  position: relative;
-  min-height: 949px;
-  margin: auto;
-  width: 100%;
-}
-
-.sideBarLeft {
+.sidebar {
   width: 25%;
   height: 100vh;
 }
@@ -208,12 +205,12 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .topBar {
+  .navbar {
     width: 100%;
     height: 50px;
   }
 
-  .alignBar div:nth-child(1) a {
+  .align div:nth-child(1) a {
     font-size: 20px;
   }
 
@@ -231,11 +228,21 @@ body {
     display: none;
   }
 
-  .sideBarLeft {
+  .sidebar {
     display: none;
   }
 
-  .dashboard {
+  .page {
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .timeline {
+    width: 100%;
+  }
+
+  .sideBarRight {
+    width: 15%;
   }
 }

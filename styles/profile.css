@@ -24,6 +24,7 @@
   margin: 24px 0;
 }
 
-.profileInformation h4 {
+.profileInformation h4,
+.profileInformation h3 {
   font-weight: bold;
 }

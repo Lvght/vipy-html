@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <title>Perfil de @pikachu</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/home.css" />
     <link rel="stylesheet" href="../styles/sidebar.css" />
@@ -15,151 +17,139 @@
     />
   </head>
   <body>
-    <div class="siteContent">
-      <div class="topBar">
-        <div class="alignBar">
-          <div>
-            <form class="searchForm" method="get">
-              <input
-                class="searchInput"
-                type="text"
-                placeholder="Busque algo ou alguém"
-              />
-              <span class="material-icons searchIcon">search</span>
-            </form>
-          </div>
+    <nav class="navbar">
+      <div class="align">
+        <div class="search">
+          <form class="searchForm" method="get">
+            <input
+              class="searchInput"
+              type="text"
+              placeholder="Busque algo ou alguém"
+            />
+            <span class="material-icons searchIcon">search</span>
+          </form>
+        </div>
 
-          <div class="siteLogo">
-            <a href="home.html">
-              <img alt="vipyLogo" src="../assets/Logotipo.svg" />
-            </a>
-          </div>
+        <div class="logo">
+          <a href="home.html">
+            <img alt="vipyLogo" src="../assets/Logotipo.svg" />
+          </a>
         </div>
       </div>
-      <div class="dashboard">
-        <div class="sideBarLeft">
-          <div class="leftBar">
-            <div class="leftBarAlign">
-              <ul>
-                <div class="profile">
-                  <div class="imageContainer">
-                    <div class="cover">
-                      <img alt="profileCover" src="../assets/coverImage.gif" />
-                    </div>
-                  </div>
-                  <div class="userProfilePictureSidebar">
-                    <div class="userProfilePicture">
-                      <img alt="profile" src="../assets/pfp.gif" />
-                    </div>
-                  </div>
-                  <div class="profileInformations">
-                    <h2 class="name">Pikachu</h2>
-                    <h3 class="username">@pikachu</h2>
-                  </div>
-                  <div class="stars">
-                    <span class="material-icons"> star </span>
-                    <span class="material-icons"> star </span>
-                    <span class="material-icons"> star </span>
-                    <span class="material-icons"> star </span>
-                    <span class="material-icons"> star </span>
+    </nav>
+    <div class="page">
+      <div class="sidebar">
+        <div class="sidebarContent">
+          <ul>
+            <div class="profile">
+              <div class="imageContainer">
+                <div class="cover">
+                  <img alt="profileCover" src="../assets/coverImage.gif" />
+                </div>
+              </div>
+              <a href="profile.html">
+                <div class="userProfilePictureSidebar">
+                  <div class="userProfilePicture">
+                    <img alt="profile" src="../assets/pfp.gif" />
                   </div>
                 </div>
-                <div class="newPostButton">
-                  <button class="newPost" id="myBtn">Novo Post</button>
-                  <button class="newPostPlus">+</button>
+              </a>
+              <a href="profile.html">
+                <div class="profileInformations">
+                  <h2 class="name">Pikachu</h2>
+                  <h3 class="username">@pikachu</h3>
                 </div>
-                <a href="#">
-                  <li class="item-menu">
-                    <span class="material-icons"> home </span>
-                    <span class="menu">Inicio</span>
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="item-menu">
-                    <span class="material-icons"> mail </span>
-                    <span class="menu">Mensagens</span>
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="item-menu">
-                    <span class="material-icons"> explore </span>
-                    <span class="menu">Descubra</span>
-                  </li>
-                </a>
-                <a href="#">
-                  <li class="item-menu">
-                    <span class="material-icons"> notifications </span>
-                    <span class="menu">Notificações</span>
-                  </li>
-                </a>
-                <a href="#">
-                  <div class="siteLogoSidebar">
-                    <img alt="vipyLogo" src="../assets/Logotipo.svg" />
-                  </div>
-                </a>
-              </ul>
+              </a>
+              <div class="stars">
+                <span class="material-icons"> star </span>
+                <span class="material-icons"> star </span>
+                <span class="material-icons"> star </span>
+                <span class="material-icons"> star </span>
+                <span class="material-icons"> star </span>
+              </div>
             </div>
+            <li class="newPostButton">
+              <button class="newPost" id="myBtn">Novo Post</button>
+              <button class="newPostPlus">+</button>
+            </li>
+            <a href="#">
+              <li class="item-menu">
+                <span class="material-icons"> home </span>
+                <span class="menu">Inicio</span>
+              </li>
+            </a>
+            <a href="#">
+              <li class="item-menu">
+                <span class="material-icons"> mail </span>
+                <span class="menu">Mensagens</span>
+              </li>
+            </a>
+            <a href="#">
+              <li class="item-menu">
+                <span class="material-icons"> explore </span>
+                <span class="menu">Descubra</span>
+              </li>
+            </a>
+            <a href="#">
+              <li class="item-menu">
+                <span class="material-icons"> notifications </span>
+                <span class="menu">Notificações</span>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="profilePage">
+        <div class="imageContainer">
+          <div class="cover">
+            <img alt="profileCover" src="../assets/coverImage.gif" />
           </div>
         </div>
-        <div class="profilePage">
-            <div class="imageContainer">
-            <div class="cover">
-                <img alt="profileCover" src="../assets/coverImage.gif" />
-            </div>
-            </div>
-            <div class="userProfilePictureSidebar">
-            <div class="userProfilePicture">
-                <img alt="profile" src="../assets/pfp.gif" />
-            </div>
-            </div>
-            <div class="profileInformations">
-            <h2 class="name">Pikachu</h2>
-            <h3 class="username">@pikachu</h3>
-            </div>
-            <div class="stars">
-            <span class="material-icons"> star </span>
-            <span class="material-icons"> star </span>
-            <span class="material-icons"> star </span>
-            <span class="material-icons"> star </span>
-            <span class="material-icons"> star </span>
-            </div>
-            <div class="profileInformation">
-                <h4 class="biography">
-                    Biografia
-                </h4>
-
-                <p>
-                  I see trouble coming 🥴
-                </p>
-            </div>
-
-            <div class="profileInformation">
-              <h4 class="biography">
-                  Personalidade
-              </h4>
-
-              <p>
-                ENTP
-              </p>
-          </div>
-
-          <div class="profileInformation">
-            <h4 class="biography">
-                Cidade
-            </h4>
-
-            <p>
-              Cidade de Vermilion
-            </p>
-          </div>
-
-          <div class="profileActions">
-            <input type="button" value="Editar" id="editProfileButton">
-            <input type="button" value="Excluir" onclick="confirm('Tem certeza de que deseja apagar sua conta na Vipy?') ? window.location='login.html' : null">
+        <div class="userProfilePictureSidebar">
+          <div class="userProfilePicture">
+            <img alt="profile" src="../assets/pfp.gif" />
           </div>
         </div>
+        <div class="profileInformations">
+          <h1 class="name">Pikachu</h1>
+          <h2 class="username">@pikachu</h2>
+        </div>
+        <div class="stars">
+          <span class="material-icons"> star </span>
+          <span class="material-icons"> star </span>
+          <span class="material-icons"> star </span>
+          <span class="material-icons"> star </span>
+          <span class="material-icons"> star </span>
+        </div>
+        <div class="profileInformation">
+          <h3 class="biography">Biografia</h3>
 
-        <div class="sideBarRight"></div>
+          <p>I see trouble coming 🥴</p>
+        </div>
+
+        <div class="profileInformation">
+          <h3 class="biography">Personalidade</h3>
+
+          <p>ENTP</p>
+        </div>
+
+        <div class="profileInformation">
+          <h3 class="biography">Cidade</h3>
+
+          <p>Cidade de Vermilion</p>
+        </div>
+
+        <div class="profileActions">
+          <input type="button" value="Editar" id="editProfileButton" />
+          <input
+            type="button"
+            value="Excluir"
+            onclick="confirm('Tem certeza de que deseja apagar sua conta na Vipy?') ? window.location='login.html' : null"
+          />
+        </div>
+      </div>
+
+      <div class="sideBarRight"></div>
     </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -167,10 +157,10 @@
         <div class="post createPost">
           <form method="post">
             <div class="card cardPost" id="cardPost">
-              <div class="cardContent">
+              <div class="content">
                 <div class="card-header" id="cardHeaderPost">
                   <a href="profile.html" class="profileLink">
-                    <div class="postAuthorProfileImage">
+                    <div class="postAuthorProfileImage" hidden>
                       <div class="userProfilePicture">
                         <img alt="profile" src="../assets/pfp.gif" />
                       </div>
@@ -214,13 +204,21 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="register editProfile">
-            <form classeName="editForm" method="post">
-              <input placeholder="Name" value="Pikachu"/>
-              <input placeholder="Email" type="email" value="pikachu@pikachu.com" />
-              <input type="password" placeholder="Password" value="pikachu"/>
-              <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" value="1997-04-01"/>
-              <button class="registerButton" type="submit">Editar</button>
-            </form>
+          <form classeName="editForm" method="post">
+            <input placeholder="Name" value="Pikachu" />
+            <input
+              placeholder="Email"
+              type="email"
+              value="pikachu@pikachu.com"
+            />
+            <input type="password" placeholder="Password" value="pikachu" />
+            <input
+              placeholder="Data de nascimento (dd-mm-aaaa)"
+              type="date"
+              value="1997-04-01"
+            />
+            <button class="registerButton" type="submit">Editar</button>
+          </form>
         </div>
       </div>
     </div>
