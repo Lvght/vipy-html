@@ -1,20 +1,20 @@
-var modal = document.getElementById("editModal");
+let modalEditPost = document.getElementById("editModal");
 
-var btn = document.getElementById("editPostButton");
+let btnEditPost = document.getElementById("editPostButton");
 
-var span = document.getElementsByClassName("close")[1];
+let spanEditPost = document.getElementsByClassName("close")[1];
 
-btn.onclick = function () {
+btnEditPost.onclick = function () {
   console.log("clicado");
-  modal.style.display = "block";
+  modalEditPost.style.display = "block";
 };
 
-span.onclick = function () {
-  modal.style.display = "none";
+spanEditPost.onclick = function () {
+  modalEditPost.style.display = "none";
 };
 
 window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modalEditPost) {
+    modalEditPost.style.display = "none";
   }
 };

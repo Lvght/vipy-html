@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/home.css" />
     <link rel="stylesheet" href="../styles/sidebar.css" />
     <link rel="stylesheet" href="../styles/modal.css" />
@@ -44,15 +45,19 @@
                       <img alt="profileCover" src="../assets/coverImage.gif" />
                     </div>
                   </div>
-                  <div class="userProfilePictureSidebar">
-                    <div class="userProfilePicture">
-                      <img alt="profile" src="../assets/pfp.gif" />
+                  <a href="profile.html">
+                    <div class="userProfilePictureSidebar">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="profileInformations">
-                    <span class="name">Pikachu</span>
-                    <span class="username">@pikachu</span>
-                  </div>
+                  </a>
+                  <a href="profile.html">
+                    <div class="profileInformations">
+                      <h2 class="name">Pikachu</h2>
+                      <h3 class="username">@pikachu</h3>
+                    </div>
+                  </a>
                   <div class="stars">
                     <span class="material-icons"> star </span>
                     <span class="material-icons"> star </span>
@@ -103,7 +108,7 @@
             <div class="card cardPost" id="cardPost">
               <div class="cardContent">
                 <div class="card-header" id="cardHeaderPost">
-                  <div class="profileLink">
+                  <a href="profile.html" class="profileLink">
                     <div class="postAuthorProfileImage">
                       <div class="userProfilePicture">
                         <img alt="profile" src="../assets/pfp.gif" />
@@ -111,19 +116,16 @@
                     </div>
                     <div class="userIdentification">
                       <div>
-                        <span>Pikachu</span>
-                        <span>@pikachu</span>
+                        <h2>Pikachu</h2>
+                        <h3>@pikachu</h3>
                       </div>
-                      <span>Postado há 2 min</span>
+                      <h4>Postado há 2 min</h4>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div class="card-body" id="cardBodyPost">
-                  <div class="postContent">
-                    Testando o post! Tudo funcionando, nada de errado
-                    acontecendo aqui...
-                  </div>
+                  <div class="postContent">Testando o post! Tudo funcionando!</div>
                 </div>
 
                 <div class="commentsQuantity">
@@ -145,11 +147,9 @@
                     </button>
                 </div>
                 <div class="action">
-                    <form method="delete">
-                        <button class="deletePost" type="submit">
-                            <span class="optionDelete" onclick="return confirm('Tem certeza disto?')">Excluir</span>
-                        </button>
-                    </form>
+                    <button class="deletePost" type="submit">
+                        <span class="optionDelete" onclick="confirm('Tem certeza disto?') ? window.location = 'home.html' : null">Excluir</span>
+                    </button>
                 </div>
         </div>
           <div class="commentariesDiv">
@@ -160,27 +160,24 @@
                     <div class="card cardPost" id="cardPost">
                     <div class="cardContent">
                         <div class="card-header" id="cardHeaderPost">
-                        <div class="profileLink">
-                            <div class="postAuthorProfileImage">
-                            <div class="userProfilePicture">
-                                <img alt="profile" src="../assets/pfp.gif" />
-                            </div>
-                            </div>
-                            <div class="userIdentification">
-                            <div>
-                                <span>Pikachu</span>
-                                <span>@pikachu</span>
-                            </div>
-                            <span>Postado há 2 min</span>
-                            </div>
-                        </div>
+                        <a href="profile.html" class="profileLink">
+                    <div class="postAuthorProfileImage">
+                      <div class="userProfilePicture">
+                        <img alt="profile" src="../assets/pfp.gif" />
+                      </div>
+                    </div>
+                    <div class="userIdentification">
+                      <div>
+                        <h2>Pikachu</h2>
+                        <h3>@pikachu</h3>
+                      </div>
+                      <h4>Postado há 2 min</h4>
+                    </div>
+                  </a>
                         </div>
 
                         <div class="card-body" id="cardBodyPost">
-                        <div class="postContent">
-                            Testando o post! Tudo funcionando, nada de errado
-                            acontecendo aqui...
-                        </div>
+                        <div class="postContent">Testando o post! Tudo funcionando!</div>
                         </div>
 
                         <div class="commentsQuantity">
@@ -208,7 +205,7 @@
             <div class="card cardPost" id="cardPost">
               <div class="cardContent">
                 <div class="card-header" id="cardHeaderPost">
-                  <div class="profileLink">
+                  <a href="profile.html" class="profileLink">
                     <div class="postAuthorProfileImage">
                       <div class="userProfilePicture">
                         <img alt="profile" src="../assets/pfp.gif" />
@@ -216,12 +213,12 @@
                     </div>
                     <div class="userIdentification">
                       <div>
-                        <span class="name">Pikachu</span><br />
-                        <span class="username">@pikachu</span>
+                        <h2>Pikachu</h2>
+                        <h3>@pikachu</h3>
                       </div>
-                      <span>Agora</span>
+                      <h4>Postado há 2 min</h4>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div class="card-body" id="cardBodyPost">
@@ -257,7 +254,7 @@
             <div class="card cardPost" id="cardPost">
               <div class="cardContent">
                 <div class="card-header" id="cardHeaderPost">
-                  <div class="profileLink">
+                  <a href="profile.html" class="profileLink">
                     <div class="postAuthorProfileImage">
                       <div class="userProfilePicture">
                         <img alt="profile" src="../assets/pfp.gif" />
@@ -265,12 +262,12 @@
                     </div>
                     <div class="userIdentification">
                       <div>
-                        <span class="name">Pikachu</span><br />
-                        <span class="username">@pikachu</span>
+                        <h2>Pikachu</h2>
+                        <h3>@pikachu</h3>
                       </div>
-                      <span>Agora</span>
+                      <h4>Postado há 2 min</h4>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div class="card-body" id="cardBodyPost">

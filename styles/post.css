@@ -40,16 +40,23 @@
   margin: auto;
 }
 
-#cardHeaderPost span:nth-child(2) {
+#cardHeaderPost h3 {
   color: #8a8a8a;
   font-size: 17px;
   font-style: italic;
   vertical-align: middle;
+  margin-left: 5px;
 }
 
-#cardHeaderPost span {
+#cardHeaderPost h2 {
   margin-left: 5px;
   line-height: 20px;
+}
+
+#cardHeaderPost h4 {
+  color: #8a8a8a;
+  font-size: 14px;
+  margin-left: 5px;
 }
 
 .profileLink {
@@ -60,6 +67,7 @@
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .userIdentification {
@@ -103,7 +111,7 @@
   margin-right: 5px;
 }
 
-.date span {
+.date h4 {
   vertical-align: middle;
 }
 
@@ -124,7 +132,6 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   text-align: justify;
-  margin-top: 10px;
 }
 
 .postImage {

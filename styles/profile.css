@@ -10,8 +10,20 @@
   width: 100%;
 }
 
+.editProfile {
+  height: inherit !important;
+}
+
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
   .profilePage {
     width: 90%;
   }
+}
+
+.profileInformation {
+  margin: 24px 0;
+}
+
+.profileInformation h4 {
+  font-weight: bold;
 }

@@ -1,97 +1,268 @@
-body{
-    padding: 0;
-    margin: 0;
-}
-.login{
-    display: flex;
-    height: 100vh;
-    max-width: 2000px;
-    max-height: 1000px;
-    margin: auto;
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
 }
 
-.login span{
-    color: white;
+body {
+  line-height: 1;
 }
 
-.login .left{
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 50%;
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    min-width: 400px;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-.login .right{
-    width: 50%;
-    overflow: hidden;
-
+nav ul {
+  list-style: none;
 }
 
-.login .logotipo{
-    margin: auto;
-    margin-bottom: 30%;
-    text-align: center;
-    justify-content: center;
+blockquote,
+q {
+  quotes: none;
 }
 
-.login .loginForm{
-    display: grid;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
-.login input, .login input:focus{
-    border-radius: 10px;
-    border: 0;
-    background-color: #ECECEC;
-    height: 50px;
-    padding: 10px;
-    margin-bottom: 15px!important;
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-.login .loginButton{
-    border-radius: 30px!important;
-    color: #449aff;
-    font-weight: 600;
-    background-color: white;
-    height: 50px;
-    padding: 10px;
-    border: 2px solid #449aff;
-    margin-top: 10px!important;
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
 }
 
-.login .goToRegisterButton, .login .goToRegisterButton:hover{
-    width: 100%;
-    background: linear-gradient(180deg, rgba(68, 154, 255, 1) 0%, rgba(7, 212, 212, 1) 100%);
-    border-radius: 30px!important;
-    color: white;
-    font-weight: 600;
-    background-color: white;
-    height: 50px;
-    padding: 10px;
-    border: 0;
-    margin-top: 10px!important;
-    text-emphasis: none;
-    text-decoration: none;
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+.login {
+  display: flex;
+  height: 100vh;
+  max-width: 2000px;
+  max-height: 1000px;
+  margin: auto;
+}
+
+.login span {
+  color: white;
+}
+
+.login .left {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  min-width: 400px;
+}
+
+.login .right {
+  width: 50%;
+  overflow: hidden;
+}
+
+.login .logotipo {
+  margin: auto;
+  margin-bottom: 30%;
+  text-align: center;
+  justify-content: center;
+}
+
+.login .loginForm {
+  display: grid;
+}
+
+.login input,
+.login input:focus {
+  border-radius: 10px;
+  border: 0;
+  background-color: #ececec;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 15px !important;
+}
+
+.login .loginButton {
+  border-radius: 30px !important;
+  color: #449aff;
+  font-weight: 600;
+  background-color: white;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid #449aff;
+  margin-top: 10px !important;
+}
+
+.login .goToRegisterButton,
+.login .goToRegisterButton:hover {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(68, 154, 255, 1) 0%,
+    rgba(7, 212, 212, 1) 100%
+  );
+  border-radius: 30px !important;
+  color: white;
+  font-weight: 600;
+  background-color: white;
+  height: 50px;
+  padding: 10px;
+  border: 0;
+  margin-top: 10px !important;
+  text-emphasis: none;
+  text-decoration: none;
 }
 
 button {
   cursor: pointer;
 }
 
-.right img{
+.right img {
   height: 100%;
 }
 
-
 @media only screen and (max-width: 950px) {
-    .login .right{
-        display: none;
-    }
-    .login .left{
-        margin: auto;
-        width: 90%;
-        z-index: 2;
-    }
+  .login .right {
+    display: none;
+  }
+  .login .left {
+    margin: auto;
+    width: 90%;
+    z-index: 2;
+  }
 }

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/home.css" />
     <link rel="stylesheet" href="../styles/sidebar.css" />
     <link rel="stylesheet" href="../styles/modal.css" />
     <link rel="stylesheet" href="../styles/postCreation.css" />
     <link rel="stylesheet" href="../styles/post.css" />
     <link rel="stylesheet" href="../styles/profile.css" />
+    <link rel="stylesheet" href="../styles/register.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -51,8 +53,8 @@
                     </div>
                   </div>
                   <div class="profileInformations">
-                    <span class="name">Pikachu</span>
-                    <span class="username">@pikachu</span>
+                    <h2 class="name">Pikachu</h2>
+                    <h3 class="username">@pikachu</h2>
                   </div>
                   <div class="stars">
                     <span class="material-icons"> star </span>
@@ -111,8 +113,8 @@
             </div>
             </div>
             <div class="profileInformations">
-            <span class="name">Pikachu</span>
-            <span class="username">@pikachu</span>
+            <h2 class="name">Pikachu</h2>
+            <h3 class="username">@pikachu</h3>
             </div>
             <div class="stars">
             <span class="material-icons"> star </span>
@@ -125,9 +127,38 @@
                 <h4 class="biography">
                     Biografia
                 </h4>
+
+                <p>
+                  I see trouble coming 🥴
+                </p>
             </div>
+
+            <div class="profileInformation">
+              <h4 class="biography">
+                  Personalidade
+              </h4>
+
+              <p>
+                ENTP
+              </p>
+          </div>
+
+          <div class="profileInformation">
+            <h4 class="biography">
+                Cidade
+            </h4>
+
+            <p>
+              Cidade de Vermilion
+            </p>
+          </div>
+
+          <div class="profileActions">
+            <input type="button" value="Editar" id="editProfileButton">
+            <input type="button" value="Excluir" onclick="confirm('Tem certeza de que deseja apagar sua conta na Vipy?') ? window.location='login.html' : null">
+          </div>
         </div>
-        
+
         <div class="sideBarRight"></div>
     </div>
     <div id="myModal" class="modal">
@@ -138,7 +169,7 @@
             <div class="card cardPost" id="cardPost">
               <div class="cardContent">
                 <div class="card-header" id="cardHeaderPost">
-                  <div class="profileLink">
+                  <a href="profile.html" class="profileLink">
                     <div class="postAuthorProfileImage">
                       <div class="userProfilePicture">
                         <img alt="profile" src="../assets/pfp.gif" />
@@ -146,12 +177,12 @@
                     </div>
                     <div class="userIdentification">
                       <div>
-                        <span class="name">Pikachu</span><br />
-                        <span class="username">@pikachu</span>
+                        <h2>Pikachu</h2>
+                        <h3>@pikachu</h3>
                       </div>
-                      <span>Agora</span>
+                      <h4>Postado há 2 min</h4>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 <div class="card-body" id="cardBodyPost">
@@ -179,6 +210,21 @@
         </div>
       </div>
     </div>
+    <div id="editProfileModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="register editProfile">
+            <form classeName="editForm" method="post">
+              <input placeholder="Name" value="Pikachu"/>
+              <input placeholder="Email" type="email" value="pikachu@pikachu.com" />
+              <input type="password" placeholder="Password" value="pikachu"/>
+              <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" value="1997-04-01"/>
+              <button class="registerButton" type="submit">Editar</button>
+            </form>
+        </div>
+      </div>
+    </div>
     <script src="../js/createPostModal.js"></script>
+    <script src="../js/editProfileModal.js"></script>
   </body>
 </html>
