@@ -185,13 +185,8 @@ span.menu {
   width: 190px;
 }
 
-@media only screen and (max-width: 600px) {
-  .sidebarContent {
-    display: none;
-  }
-}
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 950px) {
   .sidebar {
     width: 15%;
   }

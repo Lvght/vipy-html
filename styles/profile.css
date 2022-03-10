@@ -20,6 +20,13 @@
   }
 }
 
+
+@media only screen and (max-width: 950px) {
+  .profilePage {
+    width: 98%;
+  }
+}
+
 .profileInformation {
   margin: 24px 0;
 }
