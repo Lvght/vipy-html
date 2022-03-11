@@ -213,6 +213,10 @@ body {
   .align div:nth-child(1) a {
     font-size: 20px;
   }
+  
+  .align div:nth-child(1) form {
+    position: unset;
+  }
 
   .arrowDropdown {
     margin-top: 15px;
