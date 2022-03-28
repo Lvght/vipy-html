@@ -1,9 +1,6 @@
 import { Request, setUser, getUser } from "./utils.js";
 
 $(document).ready(function () {
-  if (getUser().tokens.access) {
-    window.location.href = "./home.html";
-  }
   $("#registerButton").click(function (event) {
     const toClean = [
       "username",

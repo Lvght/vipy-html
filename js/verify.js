@@ -1,9 +1,6 @@
 import { getUser, setUser, Request } from "./utils.js";
 
 $(document).ready(function () {
-  if (getUser().tokens.access) {
-    window.location.href = "./home.html";
-  }
   $("#verifyButton").click(function (event) {
     //stop submit the form, we will post it manually.
     event.preventDefault();
