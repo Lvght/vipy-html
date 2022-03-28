@@ -5,8 +5,12 @@
     <title>Entrar</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/login.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/login.js"></script>
   </head>
   <body>
@@ -20,20 +24,21 @@
             alt="logotipo"
           />
           <form class="loginForm" method="post" id="loginForm">
-            <input placeholder="Username" name="username"/>
-            <input placeholder="Password" type="password" name="password"/>
+            <input placeholder="Username" name="username" />
+            <input placeholder="Password" type="password" name="password" />
             <h1 id="output"></h1>
 
-            <button class="loginButton" id="loginButton" type="submit">
-              Login
-            </button>
+            <button class="loginButton" id="loginButton">Login</button>
             <br />
             <a href="#">Esqueceu sua senha?</a>
             <hr />
-            <button formaction="register.html" formmethod="get" class="goToRegisterButton">
+            <button
+              formaction="register.html"
+              formmethod="get"
+              class="goToRegisterButton"
+            >
               Cadastrar
             </button>
-            
           </form>
         </center>
       </div>

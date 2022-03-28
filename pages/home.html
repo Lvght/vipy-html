@@ -13,8 +13,13 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/templates/js/_sidebar.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <nav class="navbar">
@@ -38,69 +43,7 @@
       </div>
     </nav>
     <div class="page">
-      <div class="sidebar">
-        <div class="sidebarContent">
-          <div class="sidebarScoll">
-            <ul>
-              <div class="profile">
-                <div class="imageContainer">
-                  <div class="cover">
-                    <img alt="profileCover" src="../assets/coverImage.gif" />
-                  </div>
-                </div>
-                <a href="profile.html">
-                  <div class="userProfilePictureSidebar">
-                    <div class="userProfilePicture">
-                      <img alt="profile" src="../assets/pfp.gif" />
-                    </div>
-                  </div>
-                </a>
-                <a href="profile.html">
-                  <div class="profileInformations">
-                    <h2 class="name">Pikachu</h2>
-                    <h3 class="username">@pikachu</h3>
-                  </div>
-                </a>
-                <div class="stars">
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                  <span class="material-icons"> star </span>
-                </div>
-              </div>
-              <li class="newPostButton">
-                <button class="newPost" id="myBtn">Novo Post</button>
-                <button class="newPostPlus">+</button>
-              </li>
-              <a href="#">
-                <li class="item-menu">
-                  <span class="material-icons"> home </span>
-                  <span class="menu">Inicio</span>
-                </li>
-              </a>
-              <a href="#">
-                <li class="item-menu">
-                  <span class="material-icons"> mail </span>
-                  <span class="menu">Mensagens</span>
-                </li>
-              </a>
-              <a href="#">
-                <li class="item-menu">
-                  <span class="material-icons"> explore </span>
-                  <span class="menu">Descubra</span>
-                </li>
-              </a>
-              <a href="#">
-                <li class="item-menu">
-                  <span class="material-icons"> notifications </span>
-                  <span class="menu">Notificações</span>
-                </li>
-              </a>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="sidebar" id="sidebar"></div>
       <div class="timeline">
         <article class="post card">
           <div class="content">
@@ -243,7 +186,7 @@
           </div>
         </article>
       </div>
-      <div class="sideBarRight"></div>
+      <div class="sidebar" id="sidebar"></div>
     </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -261,9 +204,9 @@
                     </div>
                     <div class="userIdentification">
                       <div>
-                        <h2 class="name">Pikachu</h2>
+                        <h2 class="name currentName">Pikachu</h2>
                         <br />
-                        <h3 class="username">@pikachu</h3>
+                        <h3 class="username currentUsername">@pikachu</h3>
                       </div>
                       <h4>Agora</h4>
                     </div>

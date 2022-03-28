@@ -5,9 +5,14 @@
     <title>Entrar</title>
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/login.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../js/login.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/verify.js"></script>
+    <script src="/templates/js/_sidebar.js"></script>
   </head>
   <body>
     <div class="login">
@@ -19,17 +24,20 @@
             src="../assets/Logotipo.svg"
             alt="logotipo"
           />
-          <h1>Um código de 6 caractéres foi enviado via email para você. </h1>
-          <h1>Por favor verifique seu código </h1>
-          <br>
+          <h1>Um código de 6 caractéres foi enviado via email para você.</h1>
+          <h1>Por favor verifique seu código</h1>
+          <br />
           <form class="loginForm" method="post" id="verifyForm">
-            <input placeholder="Codigo de verificação" name="code" maxlength="6"/>
+            <input
+              placeholder="Codigo de verificação"
+              name="code"
+              maxlength="6"
+            />
             <h1 id="output"></h1>
 
-            <button class="loginButton" id="verifyButton" type="submit">
+            <button class="loginButton" id="verifyButton">
               Verificar Código
             </button>
-            
           </form>
         </center>
       </div>
