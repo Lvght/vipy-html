@@ -2,7 +2,6 @@ import { User, getUser, replaceClassText } from "../../js/utils.js";
 import openModalCallback from "../../js/createPostModal.js";
 
 $(document).ready(function () {
-  console.log("sidebar.js loaded");
   var client = new XMLHttpRequest();
   client.open("GET", "/templates/html/_sidebar.html");
   client.onreadystatechange = function () {

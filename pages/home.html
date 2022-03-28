@@ -19,6 +19,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="/templates/js/_sidebar.js"></script>
+    <script type="module" src="/js/home.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -44,148 +45,7 @@
     </nav>
     <div class="page">
       <div class="sidebar" id="sidebar"></div>
-      <div class="timeline">
-        <article class="post card">
-          <div class="content">
-            <div class="header">
-              <a href="profile.html" class="profileLink">
-                <div class="postAuthorProfileImage" hidden>
-                  <div class="userProfilePicture">
-                    <img alt="profile" src="../assets/pfp.gif" />
-                  </div>
-                </div>
-                <div class="userIdentification">
-                  <div>
-                    <h2>Pikachu</h2>
-                    <h3>@pikachu</h3>
-                  </div>
-                  <h4>Postado há 2 min</h4>
-                </div>
-              </a>
-            </div>
-
-            <div class="body">
-              <p class="postContent">Testando o post! Tudo funcionando!</p>
-            </div>
-
-            <div class="commentsQuantity" hidden>
-              <div class="commentInputProfileImage">
-                <div class="userProfilePicture">
-                  <img alt="profile" src="../assets/pfp.gif" />
-                </div>
-              </div>
-              <h4>Comente algo...</h4>
-              <h4 class="commentCount">42</h4>
-            </div>
-            <a href="post.html" class="seePost">Ver postagem</a>
-          </div>
-        </article>
-        <article class="post card">
-          <div class="content">
-            <div class="header">
-              <a href="profile.html" class="profileLink">
-                <div class="postAuthorProfileImage" hidden>
-                  <div class="userProfilePicture">
-                    <img alt="profile" src="../assets/pfp.gif" />
-                  </div>
-                </div>
-                <div class="userIdentification">
-                  <div>
-                    <h2>Pikachu</h2>
-                    <h3>@pikachu</h3>
-                  </div>
-                  <h4>Postado há 2 min</h4>
-                </div>
-              </a>
-            </div>
-
-            <div class="body">
-              <p class="postContent">Testando o post! Tudo funcionando!</p>
-            </div>
-
-            <div class="commentsQuantity" hidden>
-              <div class="commentInputProfileImage">
-                <div class="userProfilePicture">
-                  <img alt="profile" src="../assets/pfp.gif" />
-                </div>
-              </div>
-              <h4>Comente algo...</h4>
-              <h4 class="commentCount">42</h4>
-            </div>
-            <a href="post.html" class="seePost">Ver postagem</a>
-          </div>
-        </article>
-        <article class="post card">
-          <div class="content">
-            <div class="header">
-              <a href="profile.html" class="profileLink">
-                <div class="postAuthorProfileImage" hidden>
-                  <div class="userProfilePicture">
-                    <img alt="profile" src="../assets/pfp.gif" />
-                  </div>
-                </div>
-                <div class="userIdentification">
-                  <div>
-                    <h2>Pikachu</h2>
-                    <h3>@pikachu</h3>
-                  </div>
-                  <h4>Postado há 2 min</h4>
-                </div>
-              </a>
-            </div>
-
-            <div class="body">
-              <p class="postContent">Testando o post! Tudo funcionando!</p>
-            </div>
-
-            <div class="commentsQuantity" hidden>
-              <div class="commentInputProfileImage">
-                <div class="userProfilePicture">
-                  <img alt="profile" src="../assets/pfp.gif" />
-                </div>
-              </div>
-              <h4>Comente algo...</h4>
-              <h4 class="commentCount">42</h4>
-            </div>
-            <a href="post.html" class="seePost">Ver postagem</a>
-          </div>
-        </article>
-        <article class="post card">
-          <div class="content">
-            <div class="header">
-              <a href="profile.html" class="profileLink">
-                <div class="postAuthorProfileImage" hidden>
-                  <div class="userProfilePicture">
-                    <img alt="profile" src="../assets/pfp.gif" />
-                  </div>
-                </div>
-                <div class="userIdentification">
-                  <div>
-                    <h2>Pikachu</h2>
-                    <h3>@pikachu</h3>
-                  </div>
-                  <h4>Postado há 2 min</h4>
-                </div>
-              </a>
-            </div>
-
-            <div class="body">
-              <p class="postContent">Testando o post! Tudo funcionando!</p>
-            </div>
-
-            <div class="commentsQuantity" hidden>
-              <div class="commentInputProfileImage">
-                <div class="userProfilePicture">
-                  <img alt="profile" src="../assets/pfp.gif" />
-                </div>
-              </div>
-              <h4>Comente algo...</h4>
-              <h4 class="commentCount">42</h4>
-            </div>
-            <a href="post.html" class="seePost">Ver postagem</a>
-          </div>
-        </article>
-      </div>
+      <div class="timeline" id="timeline"></div>
       <div class="sidebar" id="sidebar"></div>
     </div>
     <div id="myModal" class="modal">

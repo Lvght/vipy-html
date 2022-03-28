@@ -23,6 +23,18 @@ export class User {
   }
 }
 
+export class Post {
+  constructor(dict) {
+    this.id = dict.id;
+    this.content = dict.content;
+    this.comment_of = dict.comment_of;
+    this.attached_post = dict.attached_post;
+    this.created_at = dict.created_at;
+    this.reactions = dict.reactions;
+    this.author = new User(dict.author);
+  }
+}
+
 export function replaceClassText(className, text) {
   const elements = document.getElementsByClassName(className);
 
