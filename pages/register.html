@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/register.js"></script>
   </head>
   <body>
     <!-- <div class="login">
@@ -39,15 +41,21 @@
             src="../assets/Logotipo.svg"
             alt="logotipo"
           />
-          <form class="loginForm" method="post">
-            <input placeholder="Name" />
-            <input placeholder="Email" type="email" />
-            <input type="password" placeholder="Password" />
-            <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" />
-            <button class="goToRegisterButton" type="submit">Criar conta</button>
+          <form class="loginForm" method="post" id="registerForm">
+            <input placeholder="Display Name" name="display_name"/>
+            <h1 id="display_name_e"></h1>
+            <input placeholder="UserName" name="username"/>
+            <h1 id="username_e"></h1>
+            <input placeholder="Email" type="email" name="email"/>
+            <h1 id="email_e"></h1>
+            <input type="password" placeholder="Password" name="password"/>
+            <h1 id="password_e"></h1>
+            <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" name="birthday"/>
+            <h1 id="birthday_e"></h1>
+            <button class="goToRegisterButton" type="submit" id="registerButton">Criar conta</button>
             <br />
             <hr />
-            <button formaction="login.html" class="loginButton">
+            <button formaction="login.html" formmethod="get" class="loginButton">
               Login
             </button>
           </form>

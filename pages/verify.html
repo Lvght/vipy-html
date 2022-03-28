@@ -19,19 +19,15 @@
             src="../assets/Logotipo.svg"
             alt="logotipo"
           />
-          <form class="loginForm" method="post" id="loginForm">
-            <input placeholder="Username" name="username"/>
-            <input placeholder="Password" type="password" name="password"/>
+          <h1>Um código de 6 caractéres foi enviado via email para você. </h1>
+          <h1>Por favor verifique seu código </h1>
+          <br>
+          <form class="loginForm" method="post" id="verifyForm">
+            <input placeholder="Codigo de verificação" name="code" maxlength="6"/>
             <h1 id="output"></h1>
 
-            <button class="loginButton" id="loginButton" type="submit">
-              Login
-            </button>
-            <br />
-            <a href="#">Esqueceu sua senha?</a>
-            <hr />
-            <button formaction="register.html" formmethod="get" class="goToRegisterButton">
-              Cadastrar
+            <button class="loginButton" id="verifyButton" type="submit">
+              Verificar Código
             </button>
             
           </form>
