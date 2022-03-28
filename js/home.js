@@ -8,9 +8,7 @@ $(document).ready(function () {
     type: "GET",
     enctype: "multipart/form-data",
     url: "https://vipyv-api.herokuapp.com/posts",
-    beforeSend: function (xhr) {
-      xhr.setRequestHeader("Authorization", "Bearer " + user.tokens.access);
-    },
+    hasAuth: true,
     crossdomain: true,
     processData: false,
     contentType: false,

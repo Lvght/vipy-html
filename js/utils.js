@@ -51,6 +51,7 @@ export class Request {
     this.processData = dict.processData;
     this.contentType = dict.contentType;
     this.timeout = dict.timeout;
+    this.hasAuth = dict.hasAuth;
     this.beforeSend = dict.beforeSend;
     this.onSuccess = dict.onSuccess;
     this.onError = dict.onError;
@@ -67,7 +68,15 @@ export class Request {
       processData: this.processData,
       contentType: this.contentType,
       timeout: this.timeout,
-      beforeSend: this.beforeSend,
+      beforeSend: function (xhr) {
+        if (request.hasAuth) {
+          const token = getUser().tokens.access;
+          xhr.setRequestHeader("Authorization", "Bearer " + token);
+        }
+        if (request.beforeSend) {
+          request.beforeSend;
+        }
+      },
       success: this.onSuccess,
       error: function (e) {
         const statusCode = e.status;
