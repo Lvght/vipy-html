@@ -1,7 +1,13 @@
+import { tryRefreshToken } from "./authManagement.js";
+
 export function getUser() {
   const userString = document.cookie.split("user=")[1];
   const user = JSON.parse(userString);
   return new User(user);
+}
+
+export function setUser(user) {
+  document.cookie = "user=" + JSON.stringify(user);
 }
 
 export class User {
@@ -32,6 +38,46 @@ export class Post {
     this.created_at = dict.created_at;
     this.reactions = dict.reactions;
     this.author = new User(dict.author);
+  }
+}
+
+export class Request {
+  constructor(dict) {
+    this.url = dict.url;
+    this.type = dict.type;
+    this.enctype = dict.enctype;
+    this.data = dict.data;
+    this.crossdomain = dict.crossdomain;
+    this.processData = dict.processData;
+    this.contentType = dict.contentType;
+    this.timeout = dict.timeout;
+    this.beforeSend = dict.beforeSend;
+    this.onSuccess = dict.onSuccess;
+    this.onError = dict.onError;
+  }
+
+  send() {
+    const request = this;
+    $.ajax({
+      type: this.type,
+      enctype: "multipart/form-data",
+      url: this.url,
+      data: this.data,
+      crossdomain: this.crossdomain,
+      processData: this.processData,
+      contentType: this.contentType,
+      timeout: this.timeout,
+      beforeSend: this.beforeSend,
+      success: this.onSuccess,
+      error: function (e) {
+        const statusCode = e.status;
+        if (statusCode === 401) {
+          tryRefreshToken(request);
+        } else {
+          this.onError;
+        }
+      },
+    });
   }
 }
 

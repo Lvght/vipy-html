@@ -1,4 +1,9 @@
+import { setUser, Request, getUser } from "./utils.js";
+
 $(document).ready(function () {
+  if (getUser().tokens.access) {
+    window.location.href = "./home.html";
+  }
   $("#loginButton").click(function (event) {
     //stop submit the form, we will post it manually.
     event.preventDefault();
@@ -14,7 +19,7 @@ $(document).ready(function () {
 
     $("#output").text("");
 
-    $.ajax({
+    const request = new Request({
       type: "POST",
       enctype: "multipart/form-data",
       url: "https://vipyv-api.herokuapp.com/profiles/login/",
@@ -23,12 +28,11 @@ $(document).ready(function () {
       processData: false,
       contentType: false,
       timeout: 800000,
-      success: function (data) {
-        document.cookie = "user=" + JSON.stringify(data);
-        console.log(data);
+      onSuccess: function (data) {
+        setUser(data);
         window.location.href = "./home.html";
       },
-      error: function (e) {
+      onError: function (e) {
         const statusCode = e.status;
         $("#loginButton").prop("disabled", false);
 
@@ -37,5 +41,7 @@ $(document).ready(function () {
         }
       },
     });
+    console.log(request);
+    request.send();
   });
 });
