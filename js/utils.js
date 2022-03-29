@@ -1,7 +1,7 @@
 import { tryRefreshToken } from "./authManagement.js";
 
 export function getUser() {
-  const userString = document.cookie.split("user=")[1];
+  const userString = document.cookie.split("user=")[1].split(";")[0];
   const user = JSON.parse(userString);
   return new User(user);
 }
