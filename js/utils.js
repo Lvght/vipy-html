@@ -83,7 +83,7 @@ export class Request {
         if (statusCode === 401) {
           tryRefreshToken(request);
         } else {
-          this.onError;
+          request.onError(e);
         }
       },
     });

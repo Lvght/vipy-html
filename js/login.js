@@ -33,7 +33,7 @@ $(document).ready(function () {
         const statusCode = e.status;
         $("#loginButton").prop("disabled", false);
 
-        if (statusCode === 404 || statusCode === 400) {
+        if (statusCode === 404 || statusCode === 403 || statusCode === 400) {
           $("#output").text("Username or password is incorrect");
         }
       },
