@@ -1,18 +1,19 @@
 import { User, getUser, replaceClassText } from "../../js/utils.js";
-import openModalCallback from "../../js/createPostModal.js";
+import {loadPostModal} from "./_createPostModal.js";
 
 $(document).ready(function () {
   var client = new XMLHttpRequest();
   client.open("GET", "/templates/html/_sidebar.html");
   client.onreadystatechange = function () {
-    $("#sidebar").html(client.responseText);
+    if (this.readyState === 4 && this.status === 200) {
 
-    const user = getUser();
+      $("#sidebar").html(client.responseText);
+      loadPostModal();
 
-    openModalCallback();
-
-    replaceClassText("currentName", user.display_name);
-    replaceClassText("currentUsername", "@" + user.username);
+      const user = getUser();
+      replaceClassText("currentName", user.display_name);
+      replaceClassText("currentUsername", "@" + user.username);
+    }
   };
   client.send();
 });

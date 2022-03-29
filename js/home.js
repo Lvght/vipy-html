@@ -16,7 +16,6 @@ $(document).ready(function () {
     onSuccess: function (data) {
       for (let i = 0; i < data.length; i++) {
         const post = new Post(data[i]);
-        console.log(post);
         addPostToTimeline(post);
       }
     },

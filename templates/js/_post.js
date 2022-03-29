@@ -36,14 +36,14 @@ function getDateSince(dateString) {
         } else return parseInt(timeSince / 60 / 60 / 24) + "d atrás";
       } else return parseInt(timeSince / 60 / 60) + "h atrás";
     } else return parseInt(timeSince / 60) + "m atrás";
-  } else parseInt(timeSince) + "s atrás";
+  } else return parseInt(timeSince) + "s atrás";
 }
 export function addPostToTimeline(post) {
   var client = new XMLHttpRequest();
   client.open("GET", "/templates/html/_post.html");
   client.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
-      $("#timeline").append(preparePost(post, client.responseText));
+        $("#timeline").prepend(preparePost(post, client.responseText));
       replacePostInformation(post);
     }
   };

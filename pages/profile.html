@@ -97,55 +97,8 @@
 
       <div class="sideBarRight"></div>
     </div>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="post createPost">
-          <form method="post">
-            <div class="card cardPost" id="cardPost">
-              <div class="content">
-                <div class="card-header" id="cardHeaderPost">
-                  <a href="profile.html" class="profileLink">
-                    <div class="postAuthorProfileImage" hidden>
-                      <div class="userProfilePicture">
-                        <img alt="profile" src="../assets/pfp.gif" />
-                      </div>
-                    </div>
-                    <div class="userIdentification">
-                      <div>
-                        <h2>Pikachu</h2>
-                        <h3>@pikachu</h3>
-                      </div>
-                      <h4>Postado há 2 min</h4>
-                    </div>
-                  </a>
-                </div>
+    <div id="createPostModal"></div>
 
-                <div class="card-body" id="cardBodyPost">
-                  <div class="postCreationContent">
-                    <textarea
-                      class="textArea"
-                      name="content"
-                      placeholder="Comente algo..."
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="bottom">
-              <div class="submitPost">
-                <input
-                  class="createPost"
-                  type="submit"
-                  data="disable:true"
-                  value="Postar"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <div id="editProfileModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -168,7 +121,6 @@
         </div>
       </div>
     </div>
-    <script src="../js/createPostModal.js"></script>
     <script src="../js/editProfileModal.js"></script>
   </body>
 </html>
