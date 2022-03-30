@@ -12,6 +12,14 @@ function replacePostClassContent(postId, className, newContent) {
   content.innerText = newContent;
 }
 
+function replacePostClassHref(postId, className, newContent) {
+  let post = document.getElementById(postId);
+  let content = post.getElementsByClassName(className)[0];
+  content.setAttribute('href', 'post.html#' + newContent);
+}
+
+
+
 function replacePostInformation(post) {
   // Não da pra colocar document.getElementById("post-" + post.id)
   // dentro de uma variável
@@ -21,6 +29,8 @@ function replacePostInformation(post) {
   replacePostClassContent(postId, "username", "@" + post.author.username);
   replacePostClassContent(postId, "dateSince", getDateSince(post.created_at));
   replacePostClassContent(postId, "postContent", post.content);
+  replacePostClassHref(postId, "seePost", post.id);
+
 }
 
 function getDateSince(dateString) {
@@ -44,6 +54,19 @@ export function addPostToTimeline(post) {
   client.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
         $("#timeline").prepend(preparePost(post, client.responseText));
+      replacePostInformation(post);
+    }
+  };
+  client.send();
+}
+
+export function seePost(post) {
+  var client = new XMLHttpRequest();
+  client.open("GET", "/templates/html/_seePost.html");
+  client.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      $("#timeline").prepend(preparePost(post, client.responseText));
+      
       replacePostInformation(post);
     }
   };
