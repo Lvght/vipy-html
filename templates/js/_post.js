@@ -1,3 +1,5 @@
+import { deletePost } from "../../js/deletePost.js";
+
 function preparePost(post, postPageString) {
   let postObject = document.createElement("div");
   postObject.innerHTML = postPageString;
@@ -60,7 +62,7 @@ export function addPostToTimeline(post) {
   client.send();
 }
 
-export function seePost(post) {
+export function seePost(post, del) {
   var client = new XMLHttpRequest();
   client.open("GET", "/templates/html/_seePost.html");
   client.onreadystatechange = function () {
@@ -68,6 +70,15 @@ export function seePost(post) {
       $("#timeline").prepend(preparePost(post, client.responseText));
       
       replacePostInformation(post);
+      let btnEditPost = document.getElementById("deletePostButton");
+      if(!del){
+        btnEditPost.onclick = function () {
+          alert(confirm('Tem certeza disto?') ? (deletePost(post.id)) : window.location = 'home.html');
+          modalEditPost.style.display = "block";
+        };
+      }else{
+        btnEditPost.remove();
+      }
     }
   };
   client.send();

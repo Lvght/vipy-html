@@ -15,7 +15,11 @@ $(document).ready(function () {
     timeout: 800000,
     onSuccess: function (data) {
       const post = new Post(data);
-      seePost(post);
+      let del = false;
+      if(post.author.username != user.username){
+        del = true;
+      }
+      seePost(post, del );
       let title = document.getElementById("title")
       title.innerText = "Post de @" + post.author.username;
       
