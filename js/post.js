@@ -3,7 +3,7 @@ import { seePost } from "../templates/js/_post.js";
 
 $(document).ready(function () {
   const user = getUser();
-  const id    = (window.location.href).substring(38);
+  const id = (window.location.href).split('?id=')[1];
     const request = new Request({
     type: "GET",
     enctype: "multipart/form-data",
