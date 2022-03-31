@@ -16,7 +16,7 @@ export function deletePost(id) {
     },
     onError: function (e) {
       if (e.status === 401) {
-        window.location.href = "./login.html";
+        window.location.href = "/";
       }
     },
   });

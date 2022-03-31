@@ -3,7 +3,7 @@ import { getUser, setUser, Request } from "./utils.js";
 export function tryRefreshToken(oldRequest) {
   let user = getUser();
   if (!user.tokens.access) {
-    window.location.href = "./login.html";
+    window.location.href = "/";
     return;
   }
 
@@ -30,7 +30,8 @@ export function tryRefreshToken(oldRequest) {
     },
     onError: function (e) {
       document.cookie = "";
-      window.location.href = "./login.html";
+      window.location.href = "/";
+      console.log('tentando sair')
     },
   });
   request.send();

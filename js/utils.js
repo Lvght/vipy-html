@@ -1,9 +1,13 @@
 import { tryRefreshToken } from "./authManagement.js";
 
 export function getUser() {
-  const userString = document.cookie.split("user=")[1].split(";")[0];
-  const user = JSON.parse(userString);
-  return new User(user);
+  try{
+    const userString = document.cookie.split("user=")[1].split(";")[0];
+    const user = JSON.parse(userString);
+    return new User(user);
+  } catch(e){
+    window.location.href = "/";
+  }
 }
 
 export function setUser(user) {
