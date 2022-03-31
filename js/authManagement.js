@@ -12,10 +12,11 @@ export function tryRefreshToken(oldRequest) {
   };
 
   const request = new Request({
+    shouldRefreshToken: false,
     type: "POST",
     dataType: "json",
     contentType: "application/json; charset=utf-8",
-    url: "https://vipyv-api.herokuapp.com/profiles/refresh/",
+    url: "/profiles/refresh/",
     data: JSON.stringify(data),
     crossdomain: true,
     timeout: 800000,

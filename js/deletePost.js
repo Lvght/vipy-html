@@ -5,7 +5,7 @@ export function deletePost(id) {
   const request = new Request({
     type: "DELETE",
     enctype: "multipart/form-data",
-    url: "https://vipyv-api.herokuapp.com/posts/"+id,
+    url: "/posts/"+id,
     hasAuth: true,
     crossdomain: true,
     processData: false,

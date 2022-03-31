@@ -39,7 +39,7 @@ function sendPost(){
     const request = new Request({
       type: "POST",
       enctype: "multipart/form-data",
-      url: "https://vipyv-api.herokuapp.com/posts/",
+      url: "/posts/",
       data: data,
       crossdomain: true,
       processData: false,

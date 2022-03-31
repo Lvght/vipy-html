@@ -1,13 +1,12 @@
-import { getUser, Post, Request } from "./utils.js";
+import { Post, Request } from "./utils.js";
 import { addPostToTimeline } from "../templates/js/_post.js";
 
+// Obtém os posts vistos na Timeline.
 $(document).ready(function () {
-  const user = getUser();
-
   const request = new Request({
     type: "GET",
     enctype: "multipart/form-data",
-    url: "https://vipyv-api.herokuapp.com/posts",
+    url: "/posts",
     hasAuth: true,
     crossdomain: true,
     processData: false,

@@ -47,18 +47,19 @@ export class Post {
 
 export class Request {
   constructor(dict) {
-    this.url = dict.url;
+    this.url = "https://vipyv-api.herokuapp.com" + dict.url;
     this.type = dict.type;
-    this.enctype = dict.enctype;
+    this.enctype = dict.enctype = "application/json";
     this.data = dict.data;
-    this.crossdomain = dict.crossdomain;
-    this.processData = dict.processData;
-    this.contentType = dict.contentType;
-    this.timeout = dict.timeout;
-    this.hasAuth = dict.hasAuth;
+    this.crossdomain = dict.crossdomain ?? true;
+    this.processData = dict.processData ?? false;
+    this.contentType = dict.contentType ?? "application/json";
+    this.timeout = dict.timeout ?? 800000;
+    this.hasAuth = dict.hasAuth ?? false;
     this.beforeSend = dict.beforeSend;
     this.onSuccess = dict.onSuccess;
     this.onError = dict.onError;
+    this.shouldRefreshToken = dict.shouldRefreshToken ?? true;
   }
 
   send() {
@@ -85,7 +86,11 @@ export class Request {
       error: function (e) {
         const statusCode = e.status;
         if (statusCode === 401) {
-          tryRefreshToken(request);
+
+          if (request.shouldRefreshToken) {
+            tryRefreshToken(request);
+          }
+
         } else {
           request.onError(e);
         }
