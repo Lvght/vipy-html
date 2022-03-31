@@ -19,7 +19,7 @@ $(document).ready(function () {
     const request = new Request({
       type: "POST",
       enctype: "multipart/form-data",
-      url: "https://vipyv-api.herokuapp.com/profiles/login/",
+      url: "/profiles/login/",
       data: data,
       crossdomain: true,
       processData: false,

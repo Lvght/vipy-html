@@ -28,7 +28,7 @@ function loadSearchSidebar() {
     const request = new Request({
       type: "GET",
       enctype: "multipart/form-data",
-      url: "https://vipyv-api.herokuapp.com/profiles/search/" + name + "/",
+      url: "/profiles/search/" + name + '/',
       hasAuth: true,
       crossdomain: true,
       processData: false,

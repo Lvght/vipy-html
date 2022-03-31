@@ -19,7 +19,7 @@ $(document).ready(function () {
     const request = new Request({
       type: "POST",
       enctype: "multipart/form-data",
-      url: "https://vipyv-api.herokuapp.com/profiles/verify/",
+      url: "/profiles/verify/",
       data: data,
       crossdomain: true,
       processData: false,
