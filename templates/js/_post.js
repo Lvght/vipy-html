@@ -17,7 +17,7 @@ function replacePostClassContent(postId, className, newContent) {
 function replacePostClassHref(postId, className, newContent) {
   let post = document.getElementById(postId);
   let content = post.getElementsByClassName(className)[0];
-  content.setAttribute('href', 'post.html#' + newContent);
+  content.setAttribute('href', 'post.html?id=' + newContent);
 }
 
 
