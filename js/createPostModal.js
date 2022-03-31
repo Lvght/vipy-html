@@ -1,20 +1,29 @@
-let modalCreatePost = document.getElementById("myModal");
+export default function injectCreatePostModalCallback() {
+  let modalCreatePost = document.getElementById("myModal");
 
-let btnCreatePost = document.getElementById("myBtn");
+  let btnCreatePost = document.getElementById("myBtn");
+  let btnCreatePostMobile = document.getElementById("myBtnMobile");
 
-let spanCreatePost = document.getElementsByClassName("close")[0];
 
-btnCreatePost.onclick = function () {
-  console.log("clicado");
-  modalCreatePost.style.display = "block";
-};
+  let spanCreatePost = document.getElementsByClassName("close")[0];
 
-spanCreatePost.onclick = function () {
-  modalCreatePost.style.display = "none";
-};
+  btnCreatePost.onclick = function () {
+    console.log("clicado");
+    modalCreatePost.style.display = "block";
+  };
 
-window.onclick = function (event) {
-  if (event.target == modalCreatePost) {
+  btnCreatePostMobile.onclick = function () {
+    console.log("clicado");
+    modalCreatePost.style.display = "block";
+  };
+
+  spanCreatePost.onclick = function () {
     modalCreatePost.style.display = "none";
-  }
-};
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modalCreatePost) {
+      modalCreatePost.style.display = "none";
+    }
+  };
+}

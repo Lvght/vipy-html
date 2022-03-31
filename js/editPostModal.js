@@ -1,13 +1,8 @@
 let modalEditPost = document.getElementById("editModal");
 
-let btnEditPost = document.getElementById("editPostButton");
 
 let spanEditPost = document.getElementsByClassName("close")[1];
 
-btnEditPost.onclick = function () {
-  console.log("clicado");
-  modalEditPost.style.display = "block";
-};
 
 spanEditPost.onclick = function () {
   modalEditPost.style.display = "none";
