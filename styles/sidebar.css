@@ -106,6 +106,44 @@
   font-size: 20px;
 }
 
+.searchName {
+  text-align: flex-start;
+  font-size: 20px;
+}
+
+.searchName::before {
+  margin-right: 10px;
+}
+
+.searchUserIdentification {
+  text-align: flex-start;
+  font-size: 15px;
+  padding: 10px
+}
+
+.searchProfileLink {
+  position: relative;
+  display: inline-flex;
+  font-size: 20px;
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 30px;
+  width: 100%;
+}
+
+.searchBar{
+  border-radius: 15px;
+  border: 1px solid #525252;
+  margin: 10px;
+  font-size: 15px;
+  color: #666666;
+  background-color: #f1f1f1;
+
+}
+
 .username {
   text-align: center;
   color: #8a8a8a;
