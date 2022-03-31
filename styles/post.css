@@ -79,6 +79,7 @@
   position: relative;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
 }
 
 .date {
@@ -195,8 +196,7 @@
 }
 
 @media only screen and (max-width: 950px) {
-.commentaries {
-  margin: 0;
+  .commentaries {
+    margin: 0;
+  }
 }
-}
-

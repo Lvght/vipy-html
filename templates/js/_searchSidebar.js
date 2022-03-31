@@ -1,4 +1,4 @@
-import { User, getUser, replaceClassText, Request} from "../../js/utils.js";
+import { User, getUser, replaceClassText, Request } from "../../js/utils.js";
 
 $(document).ready(function () {
   var client = new XMLHttpRequest();
@@ -6,28 +6,25 @@ $(document).ready(function () {
   client.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       $("#sidebar2").html(client.responseText);
-      loadSearchSidebar()
+      loadSearchSidebar();
     }
   };
   client.send();
 });
 
+function loadSearchSidebar() {
+  const search = document.getElementById("searchProfiles");
+  const searchResults = document.getElementById("searchResults");
+  search.addEventListener("input", updateValue);
 
-function loadSearchSidebar(){
-
-  const search = document.getElementById('searchProfiles');
-  const searchResults = document.getElementById('searchResults');
-  search.addEventListener('input', updateValue);
-
-  let last = '';
+  let last = "";
   function updateValue() {
-    searchResults.innerHTML = '';
+    searchResults.innerHTML = "";
     searchProfiles(search.value);
     last = search.value;
   }
 
-  function searchProfiles(name){
-    
+  function searchProfiles(name) {
     const request = new Request({
       type: "GET",
       enctype: "multipart/form-data",
@@ -38,23 +35,22 @@ function loadSearchSidebar(){
       contentType: false,
       timeout: 800000,
       onSuccess: function (data) {
-        let inner = ""
+        let inner = "";
         for (let i = 0; i < data.length; i++) {
           const user = new User(data[i]);
           inner += template(user);
         }
-        if (name == last)
-          searchResults.innerHTML = inner;
+        if (name == last) searchResults.innerHTML = inner;
       },
       onError: function (e) {
-        searchResults.innerHTML = '';
+        searchResults.innerHTML = "";
       },
     });
 
     request.send();
   }
 
-  function template(user){
+  function template(user) {
     let aux = `<a id="toProfile" href="profile.html?id=${user.id}">
       <div class="searchProfileLink">
         <div class="postAuthorProfileImage" hidden>
@@ -64,12 +60,12 @@ function loadSearchSidebar(){
         </div>
         <div class="searchUserIdentification">
             <h2 class="searchName">${user.display_name}</h2>
-            <h3 class="username">@${user.username}</h3>
+            <h3 class="searchUsername">@${user.username}</h3>
         </div>
       </div>
   </a>`;
-  
-  console.log(aux);
-  return aux;
-}
+
+    console.log(aux);
+    return aux;
+  }
 }
