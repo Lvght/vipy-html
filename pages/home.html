@@ -21,29 +21,11 @@
     <script type="module" src="/templates/js/_sidebar.js"></script>
     <script type="module" src="/js/home.js"></script>
     <script type="module" src="../js/authManagement.js"></script>
+    <script type="module" src="/templates/js/_navbar.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="align">
-        <div class="search">
-          <form class="searchForm" method="get">
-            <input
-              class="searchInput"
-              type="text"
-              placeholder="Busque algo ou alguém"
-            />
-            <span class="material-icons searchIcon">search</span>
-          </form>
-        </div>
-
-        <div class="logo">
-          <a href="home.html">
-            <img alt="vipyLogo" src="../assets/Logotipo.svg" />
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar"></div>
     <div class="page">
       <div class="sidebar" id="sidebar"></div>
       <div class="timeline" id="timeline"></div>
