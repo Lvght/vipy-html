@@ -27,7 +27,7 @@ $(document).ready(function () {
       timeout: 800000,
       onSuccess: function (data) {
         setUser(data);
-        window.location.href = "./home.html";
+        window.location.href = "./pages/home.html";
       },
       onError: function (e) {
         const statusCode = e.status;

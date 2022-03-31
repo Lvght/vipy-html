@@ -68,16 +68,18 @@ body {
   padding: 10px;
   border: 2px solid #449aff;
   margin-top: 10px !important;
-  transition: all .3s ease-in;
+  margin-bottom: 24px;
+  transition: all .2s ease-in;
 }
 
 .login .loginButton:hover {
-  transform: scale(105%);
-  box-shadow: 0px 5px #ddd;
+  /* Deixa o vbotão ligeiramente mais escuro. */
+  background-color: #eee;
 }
 
 .login .goToRegisterButton{
   width: 100%;
+  display: flex;
   background: linear-gradient(
     180deg,
     rgba(68, 154, 255, 1) 0%,
@@ -88,7 +90,13 @@ body {
   font-weight: 600;
   background-color: white;
   height: 50px;
-  padding: 10px;
+
+  font-family: sans-serif;
+
+  /* Alinha o texto ao centro. */
+  align-items: center;
+  justify-content: center;
+
   border: 0;
   margin-top: 10px !important;
   text-emphasis: none;
@@ -98,7 +106,6 @@ body {
 
 
 .login .goToRegisterButton:hover {
-  transform: scale(105%);
   box-shadow: 0px 5px #ddd;
 }
 
