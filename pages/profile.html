@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Perfil de @pikachu</title>
-    <link rel="stylesheet" href="../styles/main.css" />
-    <link rel="stylesheet" href="../styles/home.css" />
-    <link rel="stylesheet" href="../styles/sidebar.css" />
-    <link rel="stylesheet" href="../styles/modal.css" />
-    <link rel="stylesheet" href="../styles/postCreation.css" />
-    <link rel="stylesheet" href="../styles/post.css" />
-    <link rel="stylesheet" href="../styles/profile.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="/templates/js/_sidebar.js"></script>
-    <script type="module" src="/templates/js/_searchSidebar.js"></script>
-    <script type="module" src="/templates/js/_navbar.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <div id="navbar"></div>
-    <div class="page">
-      <div class="sidebar" id="sidebar"></div>
-      <div class="profilePage">
-        <div class="imageContainer">
-          <div class="cover">
-            <img alt="profileCover" src="../assets/coverImage.gif" />
-          </div>
-        </div>
-        <div class="userProfilePictureSidebar">
-          <div class="userProfilePicture">
-            <img alt="profile" src="../assets/pfp.gif" />
-          </div>
-        </div>
-        <div class="profileInformations">
-          <h1 class="name">Pikachu</h1>
-          <h2 class="username">@pikachu</h2>
-        </div>
-        <div class="stars">
-          <span class="material-icons"> star </span>
-          <span class="material-icons"> star </span>
-          <span class="material-icons"> star </span>
-          <span class="material-icons"> star </span>
-          <span class="material-icons"> star </span>
-        </div>
-        <div class="profileInformation">
-          <h3 class="biography">Biografia</h3>
+<head>
+  <meta charset="utf-8" />
+  <title>Perfil de @pikachu</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/home.css" />
+  <link rel="stylesheet" href="../styles/sidebar.css" />
+  <link rel="stylesheet" href="../styles/modal.css" />
+  <link rel="stylesheet" href="../styles/postCreation.css" />
+  <link rel="stylesheet" href="../styles/post.css" />
+  <link rel="stylesheet" href="../styles/profile.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-          <p>I see trouble coming 🥴</p>
-        </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="module" src="/templates/js/_sidebar.js"></script>
+  <script type="module" src="/templates/js/_searchSidebar.js"></script>
+  <script type="module" src="/templates/js/_navbar.js"></script>
 
-        <div class="profileInformation">
-          <h3 class="biography">Personalidade</h3>
+  <script type="module" src="/js/profile.js"></script>
 
-          <p>ENTP</p>
-        </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-        <div class="profileInformation">
-          <h3 class="biography">Cidade</h3>
-
-          <p>Cidade de Vermilion</p>
-        </div>
-
-        <div class="profileActions">
-          <input type="button" value="Editar" id="editProfileButton" />
-          <input
-            type="button"
-            value="Excluir"
-            onclick="confirm('Tem certeza de que deseja apagar sua conta na Vipy?') ? window.location='/' : null"
-          />
+<body>
+  <div id="navbar"></div>
+  <div class="page">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="profilePage">
+      <div class="imageContainer">
+        <div class="cover">
+          <img alt="profileCover" src="../assets/coverImage.gif" />
         </div>
       </div>
+      <div class="userProfilePictureSidebar">
+        <div class="userProfilePicture">
+          <img alt="profile" src="../assets/pfp.gif" />
+        </div>
+      </div>
+      <div class="profileInformations">
+        <h1 id="displayName" class="name">Pikachu</h1>
+        <h2 id="username" class="username">@pikachu</h2>
+      </div>
+      <div class="stars">
+        <span class="material-icons"> star </span>
+        <span class="material-icons"> star </span>
+        <span class="material-icons"> star </span>
+        <span class="material-icons"> star </span>
+        <span class="material-icons"> star </span>
+      </div>
+      <div class="profileInformation">
+        <h3 class="biography">Biografia</h3>
 
-      <div class="sidebar" id="sidebar2">
+        <p>I see trouble coming 🥴</p>
+      </div>
+
+      <div class="profileInformation">
+        <h3 class="biography">Personalidade</h3>
+
+        <p>ENTP</p>
+      </div>
+
+      <div class="profileInformation">
+        <h3 class="biography">Cidade</h3>
+
+        <p>Cidade de Vermilion</p>
+      </div>
+
+      <div class="profileActions">
+        <input type="button" value="Editar" id="editProfileButton" />
+        <input type="button" value="Excluir"
+          onclick="confirm('Tem certeza de que deseja apagar sua conta na Vipy?') ? window.location='/' : null" />
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar2">
 
     </div>
     <div id="createPostModal"></div>
@@ -90,22 +86,15 @@
         <div class="register editProfile">
           <form classeName="editForm" method="post">
             <input placeholder="Name" value="Pikachu" />
-            <input
-              placeholder="Email"
-              type="email"
-              value="pikachu@pikachu.com"
-            />
+            <input placeholder="Email" type="email" value="pikachu@pikachu.com" />
             <input type="password" placeholder="Password" value="pikachu" />
-            <input
-              placeholder="Data de nascimento (dd-mm-aaaa)"
-              type="date"
-              value="1997-04-01"
-            />
+            <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" value="1997-04-01" />
             <button class="registerButton" type="submit">Editar</button>
           </form>
         </div>
       </div>
     </div>
     <script src="../js/editProfileModal.js"></script>
-  </body>
+</body>
+
 </html>

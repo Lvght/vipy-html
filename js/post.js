@@ -7,7 +7,7 @@ $(document).ready(function () {
     const request = new Request({
     type: "GET",
     enctype: "multipart/form-data",
-    url: "https://vipyv-api.herokuapp.com/posts/"+id,
+    url: "/posts/"+id,
     hasAuth: true,
     crossdomain: true,
     processData: false,
