@@ -1,8 +1,14 @@
-import { User, getUser, replaceClassText, Post, Request } from "../../js/utils.js";
+import {
+  User,
+  getUser,
+  replaceClassText,
+  Post,
+  Request,
+} from "../../js/utils.js";
 import { addPostToTimeline } from "./_post.js";
 import openModalCallback from "../../js/createPostModal.js";
 
-export function loadPostModal(){
+export function loadPostModal() {
   var client = new XMLHttpRequest();
   client.open("GET", "/templates/html/_createPostModal.html");
   client.onreadystatechange = function () {
@@ -21,7 +27,7 @@ export function loadPostModal(){
   client.send();
 }
 
-function sendPost(){
+function sendPost() {
   $("#createPostBtn").click(function (event) {
     //stop submit the form, we will post it manually.
     event.preventDefault();
@@ -35,7 +41,6 @@ function sendPost(){
     // disabled the submit button
     $("#createPostBtn").prop("disabled", true);
 
-
     const request = new Request({
       type: "POST",
       enctype: "multipart/form-data",
@@ -47,10 +52,15 @@ function sendPost(){
       hasAuth: true,
       timeout: 800000,
       onSuccess: function (data) {
-        const post = new Post(data)
+        const post = new Post(data);
         addPostToTimeline(post);
         document.getElementById("myModal").style.display = "none";
-      }
+      },
+      onError: function () {
+        document.getElementById("errorMessage").innerHTML =
+          "Mensagem da postagem inválida";
+        $("#createPostBtn").prop("disabled", false);
+      },
     });
     console.log(request);
     request.send();

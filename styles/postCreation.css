@@ -71,3 +71,7 @@
   font-size: 18px;
   text-align: justify;
 }
+
+#errorMessage {
+  color: red;
+}
