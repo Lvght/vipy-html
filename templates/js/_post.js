@@ -105,8 +105,7 @@ export function seePost(post, del) {
       $("#timeline").prepend(preparePost(post, client.responseText));
       replacePostInformation(post);
       addCommentPost(post);
-      listComment(post.id);
-           
+            
       let btnEditPost = document.getElementById("deletePostButton");
       if (!del) {
         btnEditPost.onclick = function () {
@@ -116,7 +115,7 @@ export function seePost(post, del) {
       } else {
         btnEditPost.remove();
       }
-      
+      listComment(post.id);
       
     }
   };
@@ -125,14 +124,14 @@ export function seePost(post, del) {
 
 export function addCommentToPost(comment) {
   var client = new XMLHttpRequest();
-  client.open("GET", "/templates/html/_seePost.html");
+  client.open("GET", "/templates/html/_comment.html");
   console.log(comment.id);
   client.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       $("#commentaries").prepend(preparePost(comment, client.responseText));
       replacePostInformation(comment);
       addCommentPost(comment);
-      document.getElementById("deletePostButton").remove();
+      document.getElementById("deleteCommentButton").remove();
     }
   }
   client.send();
