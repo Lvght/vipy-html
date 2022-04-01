@@ -19,7 +19,7 @@ $(document).ready(function () {
       if(post.author.username != user.username){
         del = true;
       }
-      seePost(post, del );
+      seePost(post, del);
       let title = document.getElementById("title")
       title.innerText = "Post de @" + post.author.username;
       

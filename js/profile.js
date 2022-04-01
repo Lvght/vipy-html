@@ -85,3 +85,21 @@ $(document).on('click', '#submitEditProfileButton', function (e) {
 
     request.send()
 })
+
+$(document).on('click', '#excludeProfileButton', function (e) {
+    const request = new Request({
+        type: "DELETE",
+        hasAuth: true,
+        url: "/profiles/" + window.location.href.split('?id=')[1] + "/",
+        onSuccess: (responseData) => {
+            window.location = '/'
+        },
+        onError: (e) => {
+            console.error(e)
+        }
+    })
+
+    if (confirm('Você tem certeza de que deseja excluir sua conta?')) {
+        request.send()
+    }
+})
