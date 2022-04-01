@@ -53,19 +53,31 @@
       <div class="profileInformation">
         <h3 class="biography">Biografia</h3>
 
-        <p>I see trouble coming 🥴</p>
+        <p id="biography">Carregando...</p>
       </div>
 
       <div class="profileInformation">
         <h3 class="biography">Personalidade</h3>
 
-        <p>ENTP</p>
+        <p id="personality">Carregando...</p>
       </div>
 
       <div class="profileInformation">
         <h3 class="biography">Cidade</h3>
 
-        <p>Cidade de Vermilion</p>
+        <p id="city">Carregando...</p>
+      </div>
+
+      <div class="profileInformation">
+        <h3 class="biography">Instituição de ensino</h3>
+
+        <p id="almaMater">Carregando...</p>
+      </div>
+
+      <div class="profileInformation">
+        <h3 class="biography">Número de contato</h3>
+
+        <p id="contactNumber">Carregando...</p>
       </div>
 
       <div class="profileActions">
@@ -84,13 +96,57 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="register editProfile">
-          <form classeName="editForm" method="post">
-            <input placeholder="Name" value="Pikachu" />
-            <input placeholder="Email" type="email" value="pikachu@pikachu.com" />
-            <input type="password" placeholder="Password" value="pikachu" />
-            <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" value="1997-04-01" />
-            <button class="registerButton" type="submit">Editar</button>
+
+          <form classeName="editForm" id="editProfileForm">
+
+            <input name="display_name" id="edit-displayName" placeholder="Nome" />
+
+            <label>
+              Biografia <br>
+              <textarea id="edit-biography" name="biography"></textarea>
+            </label>
+
+            <br>
+
+            <label>
+              Aniversário <br>
+              <input name="birthday" id="edit-birthday" placeholder="Data de nascimento (dd-mm-aaaa)" type="date" />
+            </label>
+
+            <label for="edit-personality">Personality</label>
+            <select id="edit-personality" name="personality">
+              <option value="0">Não definido</option>
+              <option value="1">ISTJ</option>
+              <option value="2">ISFJ</option>
+              <option value="3">INFJ</option>
+              <option value="4">INTJ</option>
+              <option value="5">ISTP</option>
+              <option value="6">ISFP</option>
+              <option value="7">INFP</option>
+              <option value="8">INTP</option>
+              <option value="9">ESTP</option>
+              <option value="10">ESFP</option>
+              <option value="11">ENFP</option>
+              <option value="12">ENTP</option>
+              <option value="13">ESTJ</option>
+              <option value="14">ESFJ</option>
+              <option value="15">ENFJ</option>
+              <option value="16">ENTJ</option>
+            </select>
+
+            </select>
+
+            <label>
+              Número de contato <br>
+              <input name="contact_number" type="text" id="edit-contactNumber" placeholder="Número de contato" />
+            </label>
+
+            <input name="alma_mater" id="edit-almaMater" placeholder="Instituição de Ensino">
+            <input name="city" id="edit-city" placeholder="Cidade">
+
+            <input type="button" id="submitEditProfileButton" value="Enviar">
           </form>
+
         </div>
       </div>
     </div>
