@@ -43,6 +43,7 @@ $(document).ready(function () {
       onSuccess: function (data) {
         setUser(data);
         window.location.href = "./verify.html";
+        $("#registerButton").prop("disabled", false);
       },
       onError: function (e) {
         const statusCode = e.status;

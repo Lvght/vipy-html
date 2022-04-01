@@ -28,10 +28,11 @@ $(document).ready(function () {
       onSuccess: function (data) {
         setUser(data);
         window.location.href = "./pages/home.html";
+        $("#loginButton").prop("disabled", false);
       },
       onError: function (e) {
-        const statusCode = e.status;
         $("#loginButton").prop("disabled", false);
+        const statusCode = e.status;
 
         if (statusCode === 404 || statusCode === 403 || statusCode === 400) {
           $("#output").text("Username or password is incorrect");
