@@ -7,7 +7,8 @@ $(document).ready(function () {
 
       $("#logoutIcon").click(function (event) {
         document.cookie =
-          "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+          "user=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" +
+          location.host;
 
         window.location.href = "/";
       });
