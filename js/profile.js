@@ -38,20 +38,23 @@ $(document).ready(function () {
 
             setUser(user)
 
-            document.getElementById("displayName").innerText = user.display_name;
-            document.getElementById("username").innerText = '@' + user.username;
-            document.getElementById("biography").innerText = user.biography;
-            document.getElementById("almaMater").innerText = user.alma_mater;
-            document.getElementById("city").innerText = user.city;
-            document.getElementById("contactNumber").innerText = user.contact_number;
-            document.getElementById("personality").innerText = getPersonalityText(user.personality)
+            document.getElementById('displayName').innerText = user.display_name;
+            document.getElementById('username').innerText = '@' + user.username;
+            document.getElementById('biography').innerText = user.biography;
+            document.getElementById('almaMater').innerText = user.alma_mater;
+            document.getElementById('city').innerText = user.city;
+            document.getElementById('contactNumber').innerText = user.contact_number;
+            document.getElementById('personality').innerText = getPersonalityText(user.personality)
 
-            // Injeta os valores inicias no formulário de edição de perfil.
-            document.getElementById("edit-displayName").value = user.display_name;
-            document.getElementById("edit-birthday").value = user.birthday
-            document.getElementById("edit-almaMater").value = user.alma_mater;
+            // Injeta os valores iniciais no formulário de edição de perfil.
+            document.getElementById('edit-displayName').value = user.display_name;
+            document.getElementById('edit-birthday').value = user.birthday
+            document.getElementById('edit-almaMater').value = user.alma_mater;
             document.getElementById('edit-biography').value = user.biography;
             document.getElementById('edit-city').value = user.city;
+
+            const dropdown = document.getElementById('edit-personality')
+            dropdown.value = user.personality
             
             document.getElementById('edit-contactNumber').value = user.contact_number;
         },

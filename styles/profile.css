@@ -14,7 +14,11 @@
   height: inherit !important;
 }
 
-.editProfile input {
+.editProfile label {
+  display: block;
+}
+
+.editProfile input, select {
   display: flex;
   margin-bottom: 16px;
 }
