@@ -84,13 +84,30 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="register editProfile">
-          <form classeName="editForm" method="post">
-            <input placeholder="Name" value="Pikachu" />
-            <input placeholder="Email" type="email" value="pikachu@pikachu.com" />
-            <input type="password" placeholder="Password" value="pikachu" />
-            <input placeholder="Data de nascimento (dd-mm-aaaa)" type="date" value="1997-04-01" />
-            <button class="registerButton" type="submit">Editar</button>
+
+          <form classeName="editForm" id="editProfileForm">
+
+            <input name="display_name" placeholder="Nome" />
+
+            <label>
+              Biografia <br>
+              <textarea></textarea>
+            </label>
+
+            <br>
+
+            <label>
+              Aniversário <br>
+              <input name="birthday" placeholder="Data de nascimento (dd-mm-aaaa)" type="date" />
+            </label>
+
+            <input name="alma_mater" placeholder="Instituição de Ensino">
+            <input name="city" placeholder="Cidade">
+            <input name="contact_number" placeholder="Número de contato">
+
+            <input type="button" id="submitEditProfileButton" value="Enviar">
           </form>
+
         </div>
       </div>
     </div>

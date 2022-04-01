@@ -14,6 +14,15 @@
   height: inherit !important;
 }
 
+.editProfile input {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.editProfile textarea {
+  margin-bottom: 16px;
+}
+
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
   .profilePage {
     width: 90%;
