@@ -1,4 +1,6 @@
 import { deletePost } from "../../js/deletePost.js";
+import { createComment } from "../../js/comment.js";
+import { listComment } from "../../js/comments.js";
 
 function preparePost(post, postPageString) {
   let postObject = document.createElement("div");
@@ -22,6 +24,14 @@ function replacePostClassHref(postId, className, newContent) {
   content.setAttribute('href', newContent);
 }
 
+function replaceIdComment(postId) {
+  let post = document.getElementById(postId);
+  let content = post.getElementsByClassName("commentInput")[0];
+  content.setAttribute('id', "comment-"+postId);
+  content = post.getElementsByClassName("commentCount")[0];
+  content.setAttribute('id', "commentCount-"+postId);
+}
+
 
 
 function replacePostInformation(post) {
@@ -36,6 +46,8 @@ function replacePostInformation(post) {
   
   replacePostClassHref(postId, "seePost", 'post.html?id=' + post.id);
   replacePostClassHref(postId, "profileLink", 'profile.html?id=' + post.author.id);
+  replaceIdComment(postId);
+
 }
 
 function getDateSince(dateString) {
@@ -53,6 +65,23 @@ function getDateSince(dateString) {
     } else return parseInt(timeSince / 60) + "m atrás";
   } else return parseInt(timeSince) + "s atrás";
 }
+
+function addCommentPost(post){
+  let addComment = document.getElementById("comment-post-"+post.id);
+  addComment.addEventListener ('keypress', (event) => {
+    const keyName = event.which;
+    console.log(keyName);
+    let comment = document.getElementById("comment-post-"+post.id).value;
+    let LenghStr = 42 - comment.length;
+    document.getElementById("commentCount-post-"+post.id).innerHTML = LenghStr;
+    if(keyName == 13 && LenghStr>=0){
+      createComment(post.id, comment);
+      console.log(comment);
+    }
+  });
+}
+
+
 export function addPostToTimeline(post) {
   var client = new XMLHttpRequest();
   client.open("GET", "/templates/html/_post.html");
@@ -61,6 +90,7 @@ export function addPostToTimeline(post) {
     if (this.readyState === 4 && this.status === 200) {
       $("#timeline").prepend(preparePost(post, client.responseText));
       replacePostInformation(post);
+      addCommentPost(post);
     }
 
   };
@@ -72,19 +102,37 @@ export function seePost(post, del) {
   client.open("GET", "/templates/html/_seePost.html");
   client.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
+      
       $("#timeline").prepend(preparePost(post, client.responseText));
-
       replacePostInformation(post);
+     
+      listComment(post.id);
+           
       let btnEditPost = document.getElementById("deletePostButton");
       if (!del) {
         btnEditPost.onclick = function () {
-          alert(confirm('Tem certeza disto?') ? (deletePost(post.id)) : window.location = 'home.html');
+          alert(confirm('Tem certeza disto?') ? (deletePost(post.id)) : window.location.reload());
           modalEditPost.style.display = "block";
         };
       } else {
         btnEditPost.remove();
       }
+      
+      
     }
   };
   client.send();
+}
+
+export function addCommentToPost(comment) {
+  var client = new XMLHttpRequest();
+  client.open("GET", "/templates/html/_seePost.html");
+  client.onreadystatechange = function () {
+    $("#commentaries").prepend(preparePost(comment, client.responseText));
+    replacePostInformation(comment);
+    addCommentPost(comment);
+  }
+  client.send();
+  console.log(comment);
+  
 }
