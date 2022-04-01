@@ -53,19 +53,31 @@
       <div class="profileInformation">
         <h3 class="biography">Biografia</h3>
 
-        <p>I see trouble coming 🥴</p>
+        <p id="biography">Carregando...</p>
       </div>
 
       <div class="profileInformation">
         <h3 class="biography">Personalidade</h3>
 
-        <p>ENTP</p>
+        <p id="personality">Carregando...</p>
       </div>
 
       <div class="profileInformation">
         <h3 class="biography">Cidade</h3>
 
-        <p>Cidade de Vermilion</p>
+        <p id="city">Carregando...</p>
+      </div>
+
+      <div class="profileInformation">
+        <h3 class="biography">Instituição de ensino</h3>
+
+        <p id="almaMater">Carregando...</p>
+      </div>
+
+      <div class="profileInformation">
+        <h3 class="biography">Número de contato</h3>
+
+        <p id="contactNumber">Carregando...</p>
       </div>
 
       <div class="profileActions">
@@ -87,23 +99,27 @@
 
           <form classeName="editForm" id="editProfileForm">
 
-            <input name="display_name" placeholder="Nome" />
+            <input name="display_name" id="edit-displayName" placeholder="Nome" />
 
             <label>
               Biografia <br>
-              <textarea></textarea>
+              <textarea id="edit-biography" name="biography"></textarea>
             </label>
 
             <br>
 
             <label>
               Aniversário <br>
-              <input name="birthday" placeholder="Data de nascimento (dd-mm-aaaa)" type="date" />
+              <input name="birthday" id="edit-birthday" placeholder="Data de nascimento (dd-mm-aaaa)" type="date" />
             </label>
 
-            <input name="alma_mater" placeholder="Instituição de Ensino">
-            <input name="city" placeholder="Cidade">
-            <input name="contact_number" placeholder="Número de contato">
+            <label>
+              Número de contato <br>
+              <input name="contact_number" type="text" id="edit-contactNumber" placeholder="Número de contato" />
+            </label>
+
+            <input name="alma_mater" id="edit-almaMater" placeholder="Instituição de Ensino">
+            <input name="city" id="edit-city" placeholder="Cidade">
 
             <input type="button" id="submitEditProfileButton" value="Enviar">
           </form>
