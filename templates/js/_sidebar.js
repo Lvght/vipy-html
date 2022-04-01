@@ -1,4 +1,4 @@
-import { User, getUser, replaceClassText } from "../../js/utils.js";
+import { getUser, replaceClassText } from "../../js/utils.js";
 import {loadPostModal} from "./_createPostModal.js";
 
 $(document).ready(function () {
@@ -13,6 +13,8 @@ $(document).ready(function () {
       const user = getUser();
       replaceClassText("currentName", user.display_name);
       replaceClassText("currentUsername", "@" + user.username);
+
+      document.getElementById("currentUserProfileLink").href = "./profile.html?id=" + user.id;
     }
   };
   client.send();

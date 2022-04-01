@@ -1,11 +1,8 @@
 let modalEditProfile = document.getElementById("editProfileModal");
+let btnEditProfile = document.getElementById("editProfileButton");
+let spanEditPost = document.getElementsByClassName("close")[0];
 
-let btnEditPost = document.getElementById("editProfileButton");
-
-let spanEditPost = document.getElementsByClassName("close")[1];
-
-btnEditPost.onclick = function () {
-  console.log("clicado");
+btnEditProfile.onclick = function () {
   modalEditProfile.style.display = "block";
 };
 
