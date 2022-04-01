@@ -92,6 +92,12 @@
   vertical-align: middle;
 }
 
+.commentInput {
+  border: 0;
+  background-color: transparent;
+  width: 80%;
+}
+
 .card .body {
   white-space: pre-line;
   font-size: 30px;

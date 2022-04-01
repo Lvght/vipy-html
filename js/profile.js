@@ -124,6 +124,9 @@ $(document).on("click", "#excludeProfileButton", function (e) {
     hasAuth: true,
     url: "/profiles/" + window.location.href.split("?id=")[1] + "/",
     onSuccess: (responseData) => {
+      document.cookie =
+        "user=;path=/pages;expires=Thu, 01 Jan 1970 00:00:00 GMT;domain=" +
+        location.host;
       window.location = "/";
     },
     onError: (e) => {
